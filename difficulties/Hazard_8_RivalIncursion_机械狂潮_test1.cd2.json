@@ -1,0 +1,1425 @@
+{
+  "Caps": {
+    "MaxActiveCritters": 40,
+    "MaxActiveEnemies": 999,
+    "MaxActiveSwarmers": 90
+  },
+  "Description": "自然潮180~210s,需要MEV、DEA模组。=================================================================================================================================机械吐酸：当勘探者被攻击时生成/吐酸变种生成；机械大水母：加入固定池，会生成粉碎者；机械马桶：发射推斥屏障；机械速射：发射物会减速矮人；机械番茄：boss单位，发射高伤害大范围炸弹；机械三眼：移速高，发射高伤害大范围炸弹，射程短；机械无畏：发射飞石；机械强弩：发射冰锥；机械重斧：践踏是屏障；机械滚滚：发射物减速矮人；机械吐酸皇后：发射炮台鞭笞子弹；机械母体：生产各类机械造物",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 1.995,
+    "EncounterDifficulty": [
+      {
+        "max": 600,
+        "min": 400,
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": [
+      1.7,
+      1.7,
+      2.5,
+      3
+    ],
+    "EnemyDamageModifier": [
+      4.2,
+      4.5,
+      4.8,
+      5.1
+    ],
+    "EnemyDamageResistance": [
+      1.2,
+      1.2,
+      1.4,
+      1.5
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 514,
+        "min": 114,
+        "weight": 5
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 1600,
+        "min": 1200,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 210,
+        "min": 180,
+        "weight": 1
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 180,
+        "min": 130,
+        "weight": 1
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.5,
+    "ExtraLargeEnemyDamageResistance": [
+      1.13,
+      1.2,
+      1.8,
+      2.55
+    ],
+    "ExtraLargeEnemyDamageResistanceB": 0.01,
+    "ExtraLargeEnemyDamageResistanceC": [
+      1.05,
+      1.2,
+      1.65,
+      2.55
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      1.13,
+      1.2,
+      1.5,
+      1.5
+    ],
+    "FriendlyFireModifier": 1,
+    "HealthRegenerationMax": 0.2,
+    "PointExtractionScalar": 1.8,
+    "ProjectileSpeedModifier": 1.87,
+    "ReviveHealthRatio": 0.2,
+    "SmallEnemyDamageResistance": [
+      1.2,
+      1.2,
+      1.2,
+      1.2
+    ],
+    "SpeedModifier": 1.41,
+    "StationaryDifficulty": [
+      {
+        "max": 1100,
+        "min": 1000,
+        "weight": 1
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 514,
+        "min": 114,
+        "weight": 5
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "max": 0.175,
+        "min": 0.175,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 3
+      },
+      {
+        "max": 0.3,
+        "min": 0.15,
+        "weight": 9
+      },
+      {
+        "max": 0.6,
+        "min": 0.4,
+        "weight": 2
+      },
+      {
+        "max": 1,
+        "min": 1,
+        "weight": 0.5
+      }
+    ],
+    "WaveStartDelayScale": 0
+  },
+  "Enemies": {
+    "ED_BarrageInfector": {
+      "Base": "ED_BarrageInfector",
+      "DifficultyRating": 30,
+      "DisplayName": "马桶",
+      "IdealSpawnSize": 7,
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 5,
+      "Rarity": 20,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3.5,
+        "DamageMultiplier": 2,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.5
+      }
+    },
+    "ED_BarrageInfector_Facility": {
+      "Base": "ED_BarrageInfector",
+      "DifficultyRating": 40,
+      "DisplayName": "机械马桶",
+      "IdealSpawnSize": 3,
+      "Materials": [
+        "M_SpaceRig_Metal08_WS",
+        "M_GlowPoint_DD_Red",
+        "M_Crystal_BlueGlow",
+        "M_Egg_Blue"
+      ],
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 0,
+      "Projectile": "PRJ_Terminator_Barrier_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3.5,
+        "DamageMultiplier": 2,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 5
+      },
+      "Temperature": {
+        "FreezeTemperature": -150,
+        "UnfreezeTemperature": -75
+      }
+    },
+    "ED_CaveLeech": {
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 5,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Rarity": 60,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Facility": {
+      "Base": "Ed_spider_spawn",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Grunt_Facility",
+          "ED_Spider_Tank_Facility",
+          "ED_Spider_RapidShooter_Facility",
+          "ED_Spider_lobber_facility",
+          "ED_Mactera_TripleShooter_facility",
+          "ED_Mactera_Shooter_Normal_facility",
+          "ED_Mactera_Shooter_HeavyVeteran_facility",
+          "ED_Spider_Tank_Boss_facility",
+          "ED_Spider_Boss_TwinA_Facility",
+          "ED_Spider_Boss_TwinB_Facility",
+          "ED_Spider_ShooterQueen_facility",
+          "ED_Spider_Spitter_facility",
+          "ED_PatrolBot",
+          "ED_PumpkinLootBug_facility",
+          "ED_Woodlouse_Facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          38.200001,
+          15,
+          5,
+          8,
+          4,
+          9,
+          4,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          6,
+          4,
+          1,
+          5
+        ]
+      }
+    },
+    "ED_FacilityBreeder": {
+      "Base": "ED_JellyBreeder",
+      "DisplayName": "机械大水母",
+      "JellyBreeder": {
+        "CloseToSpawnEggTime": 10,
+        "EggBurstSize": 3,
+        "EggHealth": 50,
+        "EggMaterial": "M_Facility_Metal01",
+        "EggName": "粉碎者蛋",
+        "EggTime": 20,
+        "EnemyToSpawn": "ED_shredder",
+        "SpawnAmount": 3,
+        "TimeBetweenBursts": 40,
+        "TimeBetweenEggs": 2
+      },
+      "Materials": [
+        "M_Crystal_BlueGlow",
+        "M_Facility_Metal01",
+        "M_Crystal_BlueGlow"
+      ],
+      "Resistances": {
+        "ColdDamageMultiplier": 6,
+        "CorrosiveDamageMultiplier": 3,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 6,
+        "PhysicalDamageMultiplier": 10
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfFrozen": true,
+        "DouseFireTemperature": 20,
+        "FreezeTemperature": -450,
+        "UnfreezeTemperature": -300
+      }
+    },
+    "ED_Facilitymatrix": {
+      "Base": "ED_Spider_Swarmer",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Courage": 1111,
+      "DifficultyRating": 100,
+      "DisplayName": "机械母体",
+      "HealthRaw": 1000,
+      "IdealSpawnSize": 1,
+      "IsBossFight": true,
+      "Materials": [
+        "M_MatrixCore_Glow"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "MaxPawnSpeed": 1.1
+      },
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Scale": 4,
+      "Spawner": {
+        "ED": "ED_Facility",
+        "Interval": 5,
+        "IntervalSpawnCount": 2,
+        "MaxSpawns": 15,
+        "OnDeathCount": 0,
+        "OnDeathKillSpawns": false
+      }
+    },
+    "ED_Grabber": {
+      "Base": "ED_Grabber",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 50,
+      "DisplayName": "抱抱",
+      "Elite": false,
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Rarity": 25,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.3,
+        "DamageMultiplier": 1.5
+      }
+    },
+    "ED_InfectedMule": {
+      "Base": "ED_InfectedMule",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "DisplayName": "BET-C",
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 0,
+      "Outline": {
+        "Enabled": true,
+        "Type": "Enemy"
+      },
+      "Rarity": 99,
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "CorrosiveDamageMultiplier": 5,
+        "DamageMultiplier": 2,
+        "ElectricDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.5
+      }
+    },
+    "ED_JellyBreeder": {
+      "Base": "ED_JellyBreeder",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "CustomVeterans": {
+        "Choices": [
+          "ED_JellyBreeder",
+          "ED_FacilityBreeder"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1,
+            "Mutate": "Iffloat",
+            "Then": 99,
+            "Value": {
+              "ED": "ED_FacilityBreeder",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 50,
+      "DisplayName": "大水母",
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 0,
+      "Rarity": 30,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 3.5,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 2,
+        "PhysicalDamageMultiplier": 10
+      }
+    },
+    "ED_Mactera_Shooter_HeavyVeteran": {
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Mactera_Shooter_HeavyVeteran",
+          "ED_Mactera_Shooter_HeavyVeteran_facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1.5,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Mactera_Shooter_HeavyVeteran_facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 30,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 0,
+      "Rarity": 25
+    },
+    "ED_Mactera_Shooter_HeavyVeteran_facility": {
+      "AttackDamageMultiplier": 2,
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "DisplayName": "机械坚甲异虫蝇",
+      "Materials": [
+        "M_Forge_MetalBlue",
+        "M_Crystal_BlueGlow"
+      ],
+      "Projectile": "PRJ_PatrolBotLaser_New_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {
+        "DieIfFrozen": true,
+        "FreezeTemperature": -300
+      }
+    },
+    "ED_Mactera_Shooter_Normal": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Mactera_Shooter_Normal",
+          "ED_Mactera_Shooter_Normal_facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1.5,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Mactera_Shooter_Normal_facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 30,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 7,
+      "MinSpawnCount": 0,
+      "Rarity": 25
+    },
+    "ED_Mactera_Shooter_Normal_facility": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "DisplayName": "机械吐刺异虫蝇",
+      "Materials": [
+        "M_Vanity_Headwear_SWAT_Balaclava_S01",
+        "M_RockCracksGlowing_Inst"
+      ],
+      "Projectile": "PRJ_PatrolBotLaser_Hacked_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {
+        "DieIfFrozen": true,
+        "FreezeTemperature": -200
+      }
+    },
+    "ED_Mactera_TripleShooter": {
+      "Base": "ED_Mactera_TripleShooter",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Mactera_TripleShooter",
+          "ED_Mactera_TripleShooter_facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Mactera_TripleShooter_facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 40,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 0
+    },
+    "ED_Mactera_TripleShooter_facility": {
+      "AttackDamageMultiplier": 0.09,
+      "Base": "ED_Mactera_TripleShooter",
+      "DisplayName": "机械三眼",
+      "Materials": [
+        "M_Facility_Metal01",
+        "M_CaveGeneric_Nitra_Glowing",
+        "M_RockCracksGlowing_Inst"
+      ],
+      "Projectile": "PRJ_FriendlyInfectedMuleGrenade_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Scale": 1.7,
+      "Temperature": {
+        "DieIfFrozen": true,
+        "FreezeTemperature": -200
+      },
+      "TimeDilation": 1.3
+    },
+    "ED_PatrolBot": {
+      "Base": "ED_Spider_Shooter",
+      "DisplayName": "机械吐酸",
+      "Materials": [
+        "M_Crystal_BlueGlow",
+        "M_Facility_Metal01"
+      ],
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_FacilityturretLaser_Burst_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Scale": 1.2,
+      "Spawner": {
+        "ED": "ED_Shredder",
+        "Interval": 0.5,
+        "IntervalSpawnCount": 1,
+        "MaxSpawns": 2,
+        "OnDeathCount": 0,
+        "OnDeathKillSpawns": true
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfBurning": true
+      }
+    },
+    "ED_Prospector": {
+      "Base": "ED_Prospector",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "DisplayName": "探勘者",
+      "HealthRaw": 3,
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 0.05,
+        "MaxAcceleration": 0.05,
+        "MaxPawnSpeed": 0.05,
+        "MaxStrafeDistance": 0.05,
+        "StrafeSpeed": 0.05
+      },
+      "Rarity": 75,
+      "Resistances": {
+        "DamageMultiplier": 1
+      },
+      "Scale": 1,
+      "TimeDilation": 1
+    },
+    "ED_PumpkinLootBug_facility": {
+      "Base": "ED_PumpkinLootBug",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 1,
+      "DisplayName": "机械猫猫虫",
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_Facility_Base02",
+        "M_Crystal_BlueGlow"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "DamageMultiplier": 1.5,
+        "FireDamageMultiplier": 5
+      },
+      "Temperature": {
+        "BurnTemperature": 3,
+        "DieIfBurning": true,
+        "DieIfFrozen": true,
+        "DouseFireTemperature": 0,
+        "FreezeTemperature": -5,
+        "UnfreezeTemperature": 0
+      }
+    },
+    "ED_ShootingPlant": {
+      "Base": "ED_ShootingPlant",
+      "DifficultyRating": 25,
+      "DisplayName": "吐珠",
+      "IdealSpawnSize": 15,
+      "MaxSpawnCount": 17,
+      "MinSpawnCount": 13,
+      "Rarity": 20,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3.5,
+        "DamageMultiplier": 1.2,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.5
+      }
+    },
+    "ED_ShootingPlant_Facility": {
+      "Base": "ED_ShootingPlant",
+      "DifficultyRating": 35,
+      "DisplayName": "机械吐珠",
+      "IdealSpawnSize": 6,
+      "Materials": [
+        "M_SpaceRig_Metal01_WS_VeryLarge",
+        "M_Donkey_LightOrange",
+        "M_Donkey_LightOrange"
+      ],
+      "MaxSpawnCount": 10,
+      "MinSpawnCount": 3,
+      "Projectile": "PRJ_PatrolBotLaser_Flying_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3.5,
+        "DamageMultiplier": 1.2,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 3
+      },
+      "Temperature": {
+        "FreezeTemperature": -100,
+        "UnfreezeTemperature": -50
+      }
+    },
+    "ED_Shredder": {
+      "Base": "ED_Shredder",
+      "DisplayName": "粉碎者",
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 2
+    },
+    "ED_SpiderSpawner": {
+      "DifficultyRating": 30,
+      "DisplayName": "机械母巢",
+      "IdealSpawnSize": 7,
+      "MaxSpawnCount": 7,
+      "MinSpawnCount": 5,
+      "Rarity": 40,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3.5,
+        "DamageMultiplier": 2,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.5
+      }
+    },
+    "ED_Spider_Boss_TwinA_Facility": {
+      "Base": "ED_Spider_Boss_TwinA",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 120,
+      "DisplayName": "机械强弩",
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_Biome_IceCaves_Rock02_Oasis",
+        "M_SpaceRig_Metal02_LS",
+        "M_Spider_Dreadnought_Twin_Shooter_Shell",
+        "M_CaveGeneric_Nitra_Terrain"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.1,
+        "MaxAcceleration": 1.1,
+        "MaxPawnSpeed": 1.1,
+        "MaxStrafeDistance": 1.1,
+        "StrafeSpeed": 1.1
+      },
+      "Projectile": "PRJ_Cryocannon_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 10,
+        "CorrosiveDamageMultiplier": 5,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 5,
+        "ExplosionDamageMultiplier": 6,
+        "FireDamageMultiplier": 5,
+        "KineticDamageMultiplier": 4,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 6
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfFrozen": false,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -300,
+        "UnfreezeTemperature": -250
+      }
+    },
+    "ED_Spider_Boss_TwinB_facility": {
+      "Base": "ED_Spider_Boss_TwinB",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 80,
+      "DisplayName": "机械重斧",
+      "HealthRaw": 750,
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_Lunar_LampRedPattern",
+        "M_SpaceRig_Metal02_LS",
+        "M_Spider_Dreadnought_Twin_Shooter_Shell",
+        "M_Biome_IceCaves_Rock02_Oasis"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.1,
+        "MaxAcceleration": 1.1,
+        "MaxPawnSpeed": 1.1,
+        "MaxStrafeDistance": 1.1,
+        "StrafeSpeed": 1.1
+      },
+      "Projectile": "PRJ_CaretakerBarrier_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 10,
+        "CorrosiveDamageMultiplier": 5,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 5,
+        "ExplosionDamageMultiplier": 6,
+        "FireDamageMultiplier": 5,
+        "KineticDamageMultiplier": 4,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 6
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfFrozen": false,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -300,
+        "UnfreezeTemperature": -250
+      }
+    },
+    "ED_Spider_Buffer": {
+      "Base": "ED_Spider_Grunt_Guard",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0
+    },
+    "ED_Spider_ExploderTank": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 1,
+      "DisplayName": "大自爆",
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 0.7,
+        "MaxAcceleration": 0.7,
+        "MaxPawnSpeed": 0.7,
+        "MaxStrafeDistance": 0.7,
+        "StrafeSpeed": 0.7
+      },
+      "Rarity": 50,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.5,
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.925,
+        "ElectricDamageMultiplier": 1.12,
+        "ExplosionDamageMultiplier": 1.12,
+        "FireDamageMultiplier": 1.12,
+        "PoisonDamageMultiplier": 1.12,
+        "RadiationDamageMultiplier": 1.12
+      },
+      "Scale": 1.5,
+      "TimeDilation": 1
+    },
+    "ED_Spider_ExploderTank_King": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 1,
+      "DisplayName": "机械自爆王",
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 0.7,
+        "MaxAcceleration": 0.7,
+        "MaxPawnSpeed": 0.7,
+        "MaxStrafeDistance": 0.7,
+        "StrafeSpeed": 0.7
+      },
+      "Rarity": 50,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.5,
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.94,
+        "ElectricDamageMultiplier": 1.12,
+        "ExplosionDamageMultiplier": 1.12,
+        "FireDamageMultiplier": 1.12,
+        "PoisonDamageMultiplier": 1.12,
+        "RadiationDamageMultiplier": 1.12
+      },
+      "Scale": 1,
+      "TimeDilation": 1
+    },
+    "ED_Spider_Grunt": {
+      "Base": "ED_Spider_Grunt",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Grunt",
+          "ED_Spider_Grunt_Facility"
+        ],
+        "Mutate": "RandomChoice"
+      }
+    },
+    "ED_Spider_Grunt_Facility": {
+      "Base": "ED_Spider_Grunt",
+      "PST_ExplodeOnDeath": 5,
+      "Resistances": {},
+      "Temperature": {
+        "FreezeTemperature": -90,
+        "UnfreezeTemperature": -50
+      }
+    },
+    "ED_Spider_Lobber": {
+      "Base": "ED_Spider_Lobber",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Lobber",
+          "ED_Spider_lobber_facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Spider_lobber_facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 35,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 0,
+      "Rarity": 25
+    },
+    "ED_Spider_RapidShooter": {
+      "Base": "ED_Spider_RapidShooter",
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_RapidShooter",
+          "ED_Spider_RapidShooter_Facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 1,
+            "Else": 1,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Spider_RapidShooter_Facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 40,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 0,
+      "Rarity": 25
+    },
+    "ED_Spider_RapidShooter_Facility": {
+      "Base": "ED_Spider_RapidShooter",
+      "DisplayName": "机械速射",
+      "Materials": [
+        "M_Forge_MetalRust_02",
+        "M_Facility_Metal01",
+        "M_RockCracksGlowing_Inst"
+      ],
+      "Projectile": "PRJ_Spider_RapidShooter_electric_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {
+        "FreezeTemperature": -100,
+        "UnfreezeTemperature": -50
+      }
+    },
+    "ED_Spider_Shooter": {
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Shooter",
+          "ED_PatrolBot"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 3,
+            "Else": 1.5,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_PatrolBot",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      }
+    },
+    "ED_Spider_ShooterQueen_facility": {
+      "AttackDamageMultiplier": 0.1,
+      "Base": "ED_Spider_ShooterQueen",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 120,
+      "DisplayName": "机械吐酸皇后",
+      "HealthRaw": 600,
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_RockCracksGlowing_Inst",
+        "M_Facility_Metal01"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.1,
+        "MaxAcceleration": 1.1,
+        "MaxPawnSpeed": 1.1,
+        "MaxStrafeDistance": 1.1,
+        "StrafeSpeed": 1.1
+      },
+      "Projectile": "PRJ_SentryOvercharge_Projectile_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 3,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 7,
+        "ExplosionDamageMultiplier": 3,
+        "FireDamageMultiplier": 2.5,
+        "KineticDamageMultiplier": 2,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 6
+      },
+      "Scale": 1.3,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfFrozen": false,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -200,
+        "UnfreezeTemperature": -250
+      }
+    },
+    "ED_Spider_Spitter": {
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Spitter",
+          "ED_Spider_Spitter_facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          {
+            "<": 3,
+            "Else": 1.5,
+            "Mutate": "Iffloat",
+            "Then": 9,
+            "Value": {
+              "ED": "ED_Spider_Spitter_facility",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      }
+    },
+    "ED_Spider_Spitter_facility": {
+      "AttackDamageMultiplier": 0.35,
+      "Base": "ED_Spider_Spitter",
+      "Materials": [
+        "M_GlobalSkin_CleanPurple_S05",
+        "M_SpaceRig_Metal07_LS"
+      ],
+      "Projectile": "PRJ_TripleShooter_electric_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {}
+    },
+    "ED_Spider_Stalker": {
+      "Base": "ED_Spider_Stalker",
+      "DisplayName": "隐刀",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0
+    },
+    "ED_Spider_Stinger": {
+      "Base": "ED_Spider_Stinger",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0
+    },
+    "ED_Spider_Tank": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Tank",
+          "ED_Spider_Tank_Amber",
+          "ED_Spider_Tank_RockpoxPlague",
+          "ED_Spider_Tank_Ice",
+          "ED_Spider_Tank_Mutated",
+          "ED_Spider_Tank_Facility"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          {
+            "<": 1,
+            "Else": 1.5,
+            "Mutate": "Iffloat",
+            "Then": 50,
+            "Value": {
+              "ED": "ED_Spider_Tank",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "DifficultyRating": 30,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 0,
+      "Rarity": 25
+    },
+    "ED_Spider_Tank_Boss_facility": {
+      "Base": "ED_Spider_Tank_Boss",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 120,
+      "DisplayName": "机械无畏",
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_RockCracksGlowing_Inst",
+        "M_Facility_Metal01"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Movement": {
+        "AlignDirectionSpeed": 1.1,
+        "MaxAcceleration": 1.1,
+        "MaxPawnSpeed": 1.1,
+        "MaxStrafeDistance": 1.1,
+        "StrafeSpeed": 1.1
+      },
+      "Projectile": "PRJ_FlyingSmartRock_C",
+      "Rarity": 30,
+      "Resistances": {
+        "ColdDamageMultiplier": 10,
+        "CorrosiveDamageMultiplier": 4,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 5,
+        "ExplosionDamageMultiplier": 5,
+        "FireDamageMultiplier": 5,
+        "KineticDamageMultiplier": 8,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 6
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "DieIfFrozen": false,
+        "DouseFireTemperature": 50,
+        "FreezeTemperature": -300,
+        "UnfreezeTemperature": -200
+      }
+    },
+    "ED_Spider_Tank_Facility": {
+      "Base": "ED_Spider_Tank",
+      "DisplayName": "机械禁卫",
+      "Materials": [
+        "M_RockCracksGlowing_Inst",
+        "M_Facility_Metal01"
+      ],
+      "PST_ExplodeOnDeath": 5,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {
+        "FreezeTemperature": -250,
+        "UnfreezeTemperature": -175
+      }
+    },
+    "ED_Spider_Tank_Ice": {
+      "Base": "ED_Spider_Tank_Ice",
+      "DisplayName": "寒霜禁卫异虫",
+      "Materials": [
+        "M_ArmorMats_ThreeFacet_Tex1Tex2",
+        "M_Biome_IceCaves_Rock01_Particles"
+      ]
+    },
+    "ED_Spider_Tank_Mutated": {
+      "Base": "ED_Spider_Tank_Mutated",
+      "DisplayName": "放射性禁卫异虫",
+      "Materials": [
+        "M_Greybox_Light_GreenX20",
+        "M_Biome_RadioactiveZone_UraniumUnlit_Terrain"
+      ]
+    },
+    "ED_Spider_lobber_facility": {
+      "AttackDamageMultiplier": 0.1,
+      "Base": "ED_Spider_Lobber",
+      "Courage": 125,
+      "DisplayName": "机械番茄",
+      "Materials": [
+        "M_Facility_Light_PhasingPower",
+        "M_Facility_Metal01",
+        "M_Biome_RadioactiveZone_UraniumGlowing_Terrain",
+        "M_WoodLouse_A_Flesh_Glow"
+      ],
+      "Projectile": "PRJ_ExploderTankClusterBomb_C",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.3,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.2,
+        "FireDamageMultiplier": 1.5
+      },
+      "Temperature": {
+        "FreezeTemperature": -100,
+        "UnfreezeTemperature": -50
+      }
+    },
+    "ED_Spider_spawn": {
+      "CustomVeterans": {
+        "Choices": [
+          "ED_Spider_Spitter_facility",
+          "ED_PatrolBot"
+        ],
+        "Mutate": "RandomChoice",
+        "weights": [
+          1,
+          1
+        ]
+      }
+    },
+    "ED_Terminator": {
+      "Base": "ED_Terminator",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 40,
+      "DisplayName": "娃娃机",
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Rarity": 20,
+      "Resistances": {
+        "ColdDamageMultiplier": 10,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 1.5,
+        "ExplosionDamageMultiplier": 1.5
+      },
+      "Scale": 1,
+      "Temperature": {
+        "DieIfFrozen": false,
+        "FreezeTemperature": -300,
+        "UnfreezeTemperature": -200
+      },
+      "TimeDilation": 1
+    },
+    "ED_WalkingPlagueheart": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 0,
+      "Rarity": 99,
+      "Resistances": {}
+    },
+    "ED_Woodlouse": {
+      "Base": "ED_Woodlouse",
+      "DisplayName": "大运",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0
+    },
+    "ED_Woodlouse_Facility": {
+      "Base": "ED_Woodlouse",
+      "DisplayName": "机械大运",
+      "IdealSpawnSize": 1,
+      "Materials": [
+        "M_Facility_Metal01",
+        "M_Uplink_Light_Red_Blink",
+        "M_Crystal_BlueGlow",
+        "MP_Projectile_Glow",
+        "M_Biome_RadioactiveZone_UraniumGlowing_Particles"
+      ],
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Projectile": "PRJ_WoodlouseAttack_electric_C",
+      "Resistances": {},
+      "Temperature": {
+        "FreezeTemperature": -200,
+        "UnfreezeTemperature": -150
+      }
+    },
+    "Ed_SuperFatleech": {
+      "Base": "ED_Caveleech",
+      "Caveleech": {
+        "BiteDamage": 5,
+        "BitesPersecond": 1,
+        "GrapDelay": 1,
+        "MaxDistanceXY": 3500,
+        "MaxDropPlayerDuration": 10,
+        "RevivedGracePeriod": 10,
+        "TentacleRetractSpeed": 250,
+        "TentacleSpeed": 750
+      },
+      "DifficultyRating": 100,
+      "DisplayName": "超级水蛭",
+      "IsBossFight": true,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Rarity": 80,
+      "Resistances": {
+        "DamageMultiplier": 0.2
+      },
+      "Scale": 2,
+      "SpawnAmountModifier": 1
+    }
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.93,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.01,
+    "NeutralDamageModifier": 0.1
+  },
+  "Messages": [
+    {
+      "Message": "有补给了!!",
+      "Send": {
+        ">=": 60,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "Mutate": "DepositedResource",
+          "Resource": "Nitra"
+        }
+      }
+    }
+  ],
+  "Name": "Hazard_8_RivalIncursion_机械狂潮_test1",
+  "Pools": {
+    "CommonEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "DisruptiveEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "DisruptiveEnemyPoolCount": {
+      "max": 177,
+      "min": 160
+    },
+    "EnemyPool": {
+      "Add": [
+        "ED_Spider_Tank_Boss_facility",
+        "ED_Spider_Boss_TwinA_Facility",
+        "ED_Spider_Boss_TwinB_facility",
+        "ED_Spider_ShooterQueen_facility",
+        "ED_Woodlouse_Facility",
+        "ED_Facilitymatrix"
+      ],
+      "Remove": [
+        "ED_Facility"
+      ],
+      "clear": false
+    },
+    "MinPoolSize": 919,
+    "SpecialEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "StationaryEnemyCount": {
+      "max": 514,
+      "min": 114
+    },
+    "StationaryPool": {
+      "Add": [
+        "ED_Prospector",
+        "ED_PumpkinLootBug_facility",
+        "ED_ShootingPlant",
+        "ED_BarrageInfector",
+        "ED_ShootingPlant_Facility",
+        "ED_BarrageInfector_Facility",
+        "Ed_SuperFatleech"
+      ],
+      "Remove": [
+        "ED_TentaclePlant",
+        "ED_StabberVines"
+      ],
+      "clear": false
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        0,
+        {
+          "DeepScan": {
+            "A": 0,
+            "B": {
+              "A": {
+                "Max": 3,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 20,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          },
+          "Default": 60,
+          "Escort": {
+            "Default": 60,
+            "FinalEventA": 55,
+            "FinalEventB": 50,
+            "FinalEventC": 45,
+            "FinalEventD": 40,
+            "Mutate": "ByEscortPhase"
+          },
+          "Mutate": "ByMissionType",
+          "Refinery": {
+            "A": 0,
+            "B": {
+              "A": {
+                "Max": 3,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 20,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          },
+          "Salvage": {
+            "A": 0,
+            "B": {
+              "A": {
+                "Max": 2,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 30,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          }
+        }
+      ]
+    }
+  },
+  "SpecialEncounters": []
+}

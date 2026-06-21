@@ -1,0 +1,1095 @@
+{
+  "Caps": {
+    "MaxActiveCritters": 60,
+    "MaxActiveEnemies": 999,
+    "MaxActiveSwarmers": 240
+  },
+  "Description": "              扩散性假抑郁症     by～芝士岩羊，创意总监～大J8马猴烧酒。想要沉浸在泥沼般的梦中，却被说成肆意妄为。不会不安，没有未来，如果能重生为这样的人就好了…现实包裹，只带来了二氧化碳般的窒息，梦总是来得慢，溜得快。#抑郁#情绪#焦虑#现实逃避#地雷系,\r\n\r\n【v1.4版本~全模组可玩】：时间潮3分半，猫猫虫、水母、机器人随时间潮刷出，岩痘水母（无法冰冻，队友需要帮助一起打）生大水母（极脆，队友需要帮助一起打）生小水母，吐珠和马桶冻住半梭子腰射带走，删除荆丛，推车心石替换氪石吐酸。乖離性透明エレジー伴生代码。",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 2.35,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": [
+      {
+        "max": 1300,
+        "min": 1100,
+        "weight": 0
+      },
+      {
+        "max": 1200,
+        "min": 1150,
+        "weight": 7
+      },
+      {
+        "max": 1200,
+        "min": 1000,
+        "weight": 0
+      }
+    ],
+    "EnemyCountModifier": [
+      3.1,
+      3.1,
+      3.1,
+      3.1
+    ],
+    "EnemyDamageModifier": [
+      5.6,
+      5.6,
+      5.6,
+      5.6
+    ],
+    "EnemyDamageResistance": [
+      2.3,
+      2.3,
+      2.3,
+      2.3
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 144,
+        "min": 144,
+        "weight": 0
+      },
+      {
+        "max": 144,
+        "min": 112,
+        "weight": 8
+      },
+      {
+        "max": 20,
+        "min": 14,
+        "weight": 0
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 2500,
+        "min": 2400,
+        "weight": 0
+      },
+      {
+        "max": 2950,
+        "min": 2850,
+        "weight": 3
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 350,
+        "min": 300,
+        "weight": 0
+      },
+      {
+        "max": 215,
+        "min": 210,
+        "weight": 1
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 240,
+        "min": 180,
+        "weight": 0
+      },
+      {
+        "max": 150,
+        "min": 130,
+        "weight": 7.5
+      },
+      {
+        "max": 299,
+        "min": 299,
+        "weight": 0
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.8,
+    "ExtraLargeEnemyDamageResistance": [
+      2.6,
+      2.6,
+      2.6,
+      2.6
+    ],
+    "ExtraLargeEnemyDamageResistanceB": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      2.2,
+      2.2,
+      2.2,
+      2.2
+    ],
+    "FriendlyFireModifier": 1,
+    "HealthRegenerationMax": 0.25,
+    "PointExtractionScalar": 1.8,
+    "ProjectileSpeedModifier": 2.35,
+    "ReviveHealthRatio": 0.25,
+    "SmallEnemyDamageResistance": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "SpeedModifier": 1.48,
+    "StationaryDifficulty": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 0
+      },
+      {
+        "max": 1000,
+        "min": 900,
+        "weight": 3
+      },
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 0
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 84,
+        "min": 64,
+        "weight": 1
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "max": 0.25,
+        "min": 0.25,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 0
+      },
+      {
+        "max": 1.6,
+        "min": 1,
+        "weight": 9
+      },
+      {
+        "max": 1.6,
+        "min": 1,
+        "weight": 0
+      },
+      {
+        "max": 1.4,
+        "min": 1.2,
+        "weight": 0
+      }
+    ],
+    "WaveStartDelayScale": 0.1
+  },
+  "EnemiesNoSync": {
+    "ED_Crawler": {
+      "Base": "ED_Spider_Grunt_Guard",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "Elite": true,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.75,
+      "Rarity": 999,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 4,
+        "DamageMultiplier": 1.2,
+        "ElectricDamageMultiplier": 8,
+        "ExplosionDamageMultiplier": 4.5,
+        "FireDamageMultiplier": 3.5,
+        "KineticDamageMultiplier": 7,
+        "PhysicalDamageMultiplier": 8.5,
+        "PoisonDamageMultiplier": 16,
+        "RadiationDamageMultiplier": 7
+      }
+    },
+    "ED_FlyingSmartRock": {
+      "AttackDamageMultiplier": 0.4,
+      "Base": "ED_Spider_Amber_Shooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.5,
+        "DamageMultiplier": 1.8,
+        "ElectricDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.9,
+        "KineticDamageMultiplier": 2,
+        "PoisonDamageMultiplier": 2.4,
+        "RadiationDamageMultiplier": 6
+      },
+      "Scale": 1.2,
+      "TimeDilation": 0.75
+    },
+    "ED_Grabber": {
+      "Base": "ED_Grabber",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 2,
+        "FireDamageMultiplier": 1.5,
+        "KineticDamageMultiplier": 1.4,
+        "PhysicalDamageMultiplier": 1.5,
+        "PoisonDamageMultiplier": 4
+      }
+    },
+    "ED_HydraWeed": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 0,
+      "Rarity": 99
+    },
+    "ED_PatrolBot": {
+      "AttackDamageMultiplier": 0.7,
+      "Base": "ED_PatrolBot",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 80,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.7,
+      "Rarity": 15,
+      "Resistances": {
+        "ColdDamageMultiplier": 7,
+        "CorrosiveDamageMultiplier": 6,
+        "DamageMultiplier": 1.1,
+        "ElectricDamageMultiplier": 4,
+        "ExplosionDamageMultiplier": 4,
+        "FireDamageMultiplier": 9,
+        "KineticDamageMultiplier": 4,
+        "PhysicalDamageMultiplier": 7,
+        "PoisonDamageMultiplier": 16,
+        "RadiationDamageMultiplier": 21
+      }
+    },
+    "ED_PlagueLarva": {
+      "Base": "ED_JellyBreeder",
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.2,
+      "Resistances": {
+        "ColdDamageMultiplier": 8,
+        "CorrosiveDamageMultiplier": 5,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 7,
+        "ExplosionDamageMultiplier": 5,
+        "FireDamageMultiplier": 7,
+        "InternalDamageMultiplier": 5,
+        "KineticDamageMultiplier": 9.7,
+        "PhysicalDamageMultiplier": 101,
+        "PoisonDamageMultiplier": 5,
+        "RadiationDamageMultiplier": 8
+      },
+      "Scale": 0.7,
+      "TimeDilation": 0.15
+    },
+    "ED_Shredder": {
+      "AttackDamageMultiplier": 0.8,
+      "Base": "ED_Shredder",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 8,
+      "IdealSpawnSize": 7,
+      "MaxSpawnCount": 8,
+      "MinSpawnCount": 6,
+      "Rarity": 15,
+      "Resistances": {
+        "FireDamageMultiplier": 2,
+        "KineticDamageMultiplier": 2,
+        "RadiationDamageMultiplier": 2
+      },
+      "TimeDilation": 1
+    },
+    "ED_Spider_ExploderTank_King": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false
+    },
+    "ED_Spider_Grunt_RockpoxPlague": {
+      "Base": "ED_Spider_Grunt_RockpoxPlague",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 25,
+      "Elite": false,
+      "IdealSpawnSize": 6,
+      "MaxSpawnCount": 7,
+      "MinSpawnCount": 5,
+      "PST_MovementSpeed": 1,
+      "Rarity": 11,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 1.5,
+        "FireDamageMultiplier": 1.5,
+        "PoisonDamageMultiplier": 3
+      }
+    },
+    "ED_Spider_RapidShooter": {
+      "Base": "ED_Spider_RapidShooter",
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "CorrosiveDamageMultiplier": 4,
+        "DamageMultiplier": 1.3,
+        "ElectricDamageMultiplier": 2.5,
+        "KineticDamageMultiplier": 1.5,
+        "PoisonDamageMultiplier": 8
+      },
+      "TimeDilation": 1
+    },
+    "ED_Spider_ShieldTank": {
+      "Base": "ED_Spider_ShieldTank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Resistances": {
+        "ColdDamageMultiplier": 3.6,
+        "CorrosiveDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 1.6,
+        "FireDamageMultiplier": 1.5,
+        "PhysicalDamageMultiplier": 3.1,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 1.5
+      }
+    },
+    "ED_Spider_Spawn": {
+      "AttackDamageMultiplier": 0.8,
+      "Base": "ED_Spider_Swarmer_Pheromone_NOFX",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 70,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 1,
+      "Rarity": 1,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 0.8,
+        "KineticDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 0.7,
+        "RadiationDamageMultiplier": 0.6
+      },
+      "TimeDilation": 1
+    },
+    "ED_Terminator": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 0,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 0,
+      "Rarity": 99
+    },
+    "ED_TunnelSwarmer": {
+      "AttackDamageMultiplier": 0.8,
+      "Base": "ED_Spider_Swarmer_Pheromone_NOFX",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 40,
+      "MaxSpawnCount": 40,
+      "MinSpawnCount": 40,
+      "PST_MovementSpeed": 1,
+      "Rarity": 1,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 0.8,
+        "KineticDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 0.7,
+        "RadiationDamageMultiplier": 0.6
+      },
+      "TimeDilation": 1
+    },
+    "アカ スウォーマー": {
+      "AttackDamageMultiplier": 0.8,
+      "Base": "ED_Spider_Swarmer_Pheromone_NOFX",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 5,
+      "IdealSpawnSize": 15,
+      "MaxSpawnCount": 15,
+      "MinSpawnCount": 15,
+      "PST_MovementSpeed": 1,
+      "Rarity": 14,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 0.8,
+        "KineticDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 0.7,
+        "RadiationDamageMultiplier": 0.6
+      },
+      "TimeDilation": 1
+    },
+    "アシッド クイーン": {
+      "AttackDamageMultiplier": 0.7,
+      "Base": "ED_Spider_ShooterQueen",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 20,
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "CorrosiveDamageMultiplier": 2,
+        "ElectricDamageMultiplier": 2.5,
+        "ExplosionDamageMultiplier": 5,
+        "FireDamageMultiplier": 3,
+        "InternalDamageMultiplier": 2,
+        "KineticDamageMultiplier": 3.5,
+        "PiercingDamageMultiplier": 2,
+        "PoisonDamageMultiplier": 6,
+        "RadiationDamageMultiplier": 2.5
+      }
+    },
+    "アーバレスト": {
+      "Base": "ED_Spider_Boss_TwinA",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1100,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 17,
+      "Resistances": {
+        "ColdDamageMultiplier": 14,
+        "CorrosiveDamageMultiplier": 7,
+        "DamageMultiplier": 0.9,
+        "ElectricDamageMultiplier": 9,
+        "ExplosionDamageMultiplier": 8,
+        "FireDamageMultiplier": 9.5,
+        "InternalDamageMultiplier": 9,
+        "KineticDamageMultiplier": 10,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 36,
+        "RadiationDamageMultiplier": 9
+      }
+    },
+    "ウェブスピッター": {
+      "Base": "ED_Spider_Spitter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "IdealSpawnSize": 5,
+      "MaxSpawnCount": 6,
+      "MinSpawnCount": 4,
+      "Rarity": 13
+    },
+    "ウォーデン": {
+      "Base": "ED_Spider_Buffer",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 70,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 1.5,
+      "Rarity": 20,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 4,
+        "DamageMultiplier": 0.9,
+        "ElectricDamageMultiplier": 4,
+        "KineticDamageMultiplier": 2.25,
+        "PhysicalDamageMultiplier": 2.5,
+        "PoisonDamageMultiplier": 9,
+        "RadiationDamageMultiplier": 3.5
+      }
+    },
+    "エクスプローダー": {
+      "Base": "ED_Spider_Exploder",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 5,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 4,
+      "MinSpawnCount": 2,
+      "Rarity": 13
+    },
+    "エリート クローラー": {
+      "AttackDamageMultiplier": 0.85,
+      "Base": "ED_Crawler",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 20,
+      "Elite": true,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.8,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 3.5,
+        "CorrosiveDamageMultiplier": 2.1,
+        "DamageMultiplier": 2.1,
+        "ElectricDamageMultiplier": 2,
+        "ExplosionDamageMultiplier": 1.2,
+        "KineticDamageMultiplier": 2,
+        "PhysicalDamageMultiplier": 1.2,
+        "PoisonDamageMultiplier": 7
+      },
+      "Scale": 1.2,
+      "TimeDilation": 0.85
+    },
+    "エリート プレトリアン": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 70,
+      "Elite": true,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 1.5,
+      "Rarity": 14,
+      "Resistances": {
+        "ColdDamageMultiplier": 6.5,
+        "CorrosiveDamageMultiplier": 2.8,
+        "DamageMultiplier": 1.1,
+        "ElectricDamageMultiplier": 5,
+        "ExplosionDamageMultiplier": 1.4,
+        "FireDamageMultiplier": 2.8,
+        "KineticDamageMultiplier": 2.3,
+        "PoisonDamageMultiplier": 12
+      },
+      "TimeDilation": 1
+    },
+    "エリートスラッシャ一": {
+      "Base": "ED_Spider_Grunt_Attacker",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 30,
+      "Elite": true,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 2,
+      "PST_MovementSpeed": 0.9,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 5.3,
+        "CorrosiveDamageMultiplier": 2.8,
+        "DamageMultiplier": 0.8,
+        "ElectricDamageMultiplier": 2.5,
+        "ExplosionDamageMultiplier": 2.6,
+        "FireDamageMultiplier": 2.2,
+        "InternalDamageMultiplier": 2,
+        "KineticDamageMultiplier": 2,
+        "PhysicalDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 7.5,
+        "RadiationDamageMultiplier": 2
+      },
+      "TimeDilation": 1
+    },
+    "カーサイト マクテラ スポーン": {
+      "Base": "ED_Mactera_Shooter_Amber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 2,
+      "Rarity": 14,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.7,
+        "DamageMultiplier": 1.6
+      }
+    },
+    "ガード": {
+      "Base": "ED_Spider_Grunt_Guard",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 15,
+      "IdealSpawnSize": 6,
+      "MaxSpawnCount": 7,
+      "MinSpawnCount": 6,
+      "Rarity": 13,
+      "Resistances": {
+        "DamageMultiplier": 1
+      }
+    },
+    "クローラー": {
+      "AttackDamageMultiplier": 0.7,
+      "Base": "ED_Crawler",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 30,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 2,
+      "Rarity": 19,
+      "Resistances": {
+        "DamageMultiplier": 1.5,
+        "ExplosionDamageMultiplier": 0.3,
+        "FireDamageMultiplier": 0.1,
+        "RadiationDamageMultiplier": 0.5
+      },
+      "Scale": 1.2,
+      "TimeDilation": 0.85
+    },
+    "グラント": {
+      "Base": "ED_Spider_Grunt",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 5,
+      "IdealSpawnSize": 7,
+      "MaxSpawnCount": 8,
+      "MinSpawnCount": 6,
+      "Rarity": 13,
+      "Resistances": {
+        "DamageMultiplier": 0.8
+      }
+    },
+    "グーボマー": {
+      "Base": "ED_Bomber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 35,
+      "Rarity": 15,
+      "Resistances": {
+        "ColdDamageMultiplier": 5.7,
+        "CorrosiveDamageMultiplier": 2.5,
+        "DamageMultiplier": 1.1,
+        "ElectricDamageMultiplier": 2.5,
+        "ExplosionDamageMultiplier": 1.6,
+        "PoisonDamageMultiplier": 6
+      }
+    },
+    "シェルバック": {
+      "Base": "ED_Woodlouse",
+      "CanBeUsedForConstantPressure": true,
+      "DifficultyRating": 80,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 19,
+      "Resistances": {
+        "ColdDamageMultiplier": 0.3,
+        "DamageMultiplier": 1.6,
+        "ElectricDamageMultiplier": 0.3,
+        "ExplosionDamageMultiplier": 1.5,
+        "FireDamageMultiplier": 1.8,
+        "InternalDamageMultiplier": 0.3,
+        "KineticDamageMultiplier": 0.8,
+        "PhysicalDamageMultiplier": 1.8,
+        "PoisonDamageMultiplier": 5
+      },
+      "Scale": 1,
+      "TimeDilation": 0.9
+    },
+    "ストーカー": {
+      "Base": "ED_Spider_Stalker",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 60,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 20,
+      "Resistances": {
+        "DamageMultiplier": 0.85
+      }
+    },
+    "スピッート ボール インフェクター": {
+      "Base": "ED_ShootingPlant",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "IdealSpawnSize": 5,
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 4,
+      "Rarity": 22,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 3.5,
+        "ElectricDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 1.3,
+        "KineticDamageMultiplier": 2,
+        "PoisonDamageMultiplier": 7
+      }
+    },
+    "スポーン": {
+      "Base": "ED_Mactera_Shooter_Normal",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 2,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.5,
+        "DamageMultiplier": 1
+      }
+    },
+    "スラッシャ一": {
+      "Base": "ED_Spider_Grunt_Attacker",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 15,
+      "IdealSpawnSize": 6,
+      "MaxSpawnCount": 7,
+      "MinSpawnCount": 6,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.5,
+        "DamageMultiplier": 1
+      }
+    },
+    "センチネル": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 70,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 10,
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "CorrosiveDamageMultiplier": 3,
+        "ElectricDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 7
+      }
+    },
+    "トライジョー": {
+      "Base": "ED_Mactera_TripleShooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 14,
+      "Resistances": {
+        "ColdDamageMultiplier": 1.7,
+        "DamageMultiplier": 1.2
+      }
+    },
+    "ドレッドノート": {
+      "Base": "ED_Spider_Tank_Boss",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1100,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.9,
+      "Rarity": 18,
+      "Resistances": {
+        "ColdDamageMultiplier": 10,
+        "CorrosiveDamageMultiplier": 9,
+        "DamageMultiplier": 1.1,
+        "ElectricDamageMultiplier": 10,
+        "ExplosionDamageMultiplier": 16,
+        "FireDamageMultiplier": 11,
+        "InternalDamageMultiplier": 10,
+        "KineticDamageMultiplier": 13,
+        "PhysicalDamageMultiplier": 21,
+        "PoisonDamageMultiplier": 46,
+        "RadiationDamageMultiplier": 10
+      }
+    },
+    "ハッチリング": {
+      "Base": "ED_Jelly_Swarmer",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 5,
+      "IdealSpawnSize": 20,
+      "MaxSpawnCount": 20,
+      "MinSpawnCount": 20,
+      "Rarity": 14
+    },
+    "ハロウィンガイコツ": {
+      "Base": "ED_Halloween_Skull",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 2.5,
+      "Rarity": 38,
+      "Resistances": {
+        "DamageMultiplier": 5
+      },
+      "TimeDilation": 1
+    },
+    "バラージ インフェクター": {
+      "Base": "ED_BarrageInfector",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "IdealSpawnSize": 5,
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 4,
+      "Rarity": 25,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 3.5,
+        "ElectricDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 1.3,
+        "KineticDamageMultiplier": 3,
+        "PoisonDamageMultiplier": 8
+      }
+    },
+    "バルクデイネーター": {
+      "Base": "ED_Spider_ExploderTank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 250,
+      "Elite": true,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 0.9,
+      "Rarity": 25,
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "CorrosiveDamageMultiplier": 5,
+        "DamageMultiplier": 2.2,
+        "ElectricDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 2,
+        "FireDamageMultiplier": 3,
+        "PhysicalDamageMultiplier": 6,
+        "PoisonDamageMultiplier": 11,
+        "RadiationDamageMultiplier": 3
+      },
+      "TimeDilation": 1
+    },
+    "フロストプレトリアン": {
+      "Base": "ED_Spider_Tank_ice",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 60,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 2,
+        "DamageMultiplier": 2,
+        "ElectricDamageMultiplier": 2,
+        "PoisonDamageMultiplier": 4
+      },
+      "TimeDilation": 1.3
+    },
+    "フロストボマー": {
+      "Base": "ED_Bomber_Ice",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 50,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 16,
+      "Resistances": {
+        "ColdDamageMultiplier": 2.5,
+        "CorrosiveDamageMultiplier": 2.5,
+        "DamageMultiplier": 1.8,
+        "ElectricDamageMultiplier": 1.8,
+        "ExplosionDamageMultiplier": 1.6,
+        "PoisonDamageMultiplier": 5
+      }
+    },
+    "ブランドル": {
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 20,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Rarity": 14,
+      "Resistances": {
+        "ColdDamageMultiplier": 2.6,
+        "DamageMultiplier": 1.2
+      }
+    },
+    "ブルード ネクサス": {
+      "Base": "ED_SpiderSpawner",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 70,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 2,
+      "Resistances": {
+        "DamageMultiplier": 1.2,
+        "PhysicalDamageMultiplier": 3
+      },
+      "TimeDilation": 0.9
+    },
+    "プレトリアン": {
+      "Base": "ED_Spider_Tank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 40,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 4.1,
+        "CorrosiveDamageMultiplier": 3,
+        "DamageMultiplier": 1.1,
+        "ElectricDamageMultiplier": 2.5,
+        "PoisonDamageMultiplier": 9
+      }
+    },
+    "プロスぺクター・ドローン": {
+      "Base": "ED_Prospector",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 160,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 5,
+      "Rarity": 110,
+      "Resistances": {
+        "DamageMultiplier": 30
+      },
+      "TimeDilation": 0.01
+    },
+    "マクテラファイアボンバー": {
+      "AttackDamageMultiplier": 0.6,
+      "Base": "ED_Bomber_Explosive",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 60,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 15,
+      "Resistances": {
+        "ColdDamageMultiplier": 3.2,
+        "CorrosiveDamageMultiplier": 2,
+        "DamageMultiplier": 1.8,
+        "ElectricDamageMultiplier": 2.5,
+        "PoisonDamageMultiplier": 5.2
+      }
+    },
+    "ラセレイター": {
+      "Base": "ED_Spider_Boss_TwinB",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1100,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 17,
+      "Resistances": {
+        "ColdDamageMultiplier": 14,
+        "CorrosiveDamageMultiplier": 7,
+        "DamageMultiplier": 0.9,
+        "ElectricDamageMultiplier": 9,
+        "ExplosionDamageMultiplier": 8,
+        "FireDamageMultiplier": 9.5,
+        "InternalDamageMultiplier": 9,
+        "KineticDamageMultiplier": 10,
+        "PhysicalDamageMultiplier": 10,
+        "PoisonDamageMultiplier": 36,
+        "RadiationDamageMultiplier": 9
+      }
+    },
+    "ルートバグ": {
+      "Base": "ED_PumpkinLootBug",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 5,
+      "MaxSpawnCount": 5,
+      "MinSpawnCount": 4,
+      "PST_MovementSpeed": 20,
+      "Rarity": 35,
+      "Resistances": {
+        "KineticDamageMultiplier": 1.3
+      }
+    },
+    "ロックポックス エクスプローダー": {
+      "Base": "ED_Spider_Exploder_Rockpox_Plague",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 15,
+      "IdealSpawnSize": 3,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 2,
+      "Rarity": 12
+    },
+    "ロックポックス スピッター": {
+      "Base": "ED_Spider_Shooter_Rockpox_Plague",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 30,
+      "IdealSpawnSize": 2,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 2,
+      "Rarity": 12,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.5,
+        "DamageMultiplier": 1.1,
+        "PoisonDamageMultiplier": 5
+      }
+    },
+    "ロックポックス ブリーダー": {
+      "Base": "ED_JellyBreeder_RockpoxPlague",
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "PST_MovementSpeed": 2,
+      "Rarity": 75,
+      "Resistances": {
+        "ColdDamageMultiplier": 3,
+        "DamageMultiplier": 1.5,
+        "ElectricDamageMultiplier": 3,
+        "ExplosionDamageMultiplier": 4,
+        "FireDamageMultiplier": 3,
+        "KineticDamageMultiplier": 21,
+        "PhysicalDamageMultiplier": 3
+      },
+      "Scale": 1.3,
+      "TimeDilation": 0.035
+    },
+    "ロックポックス プレトリアン": {
+      "Base": "ED_Spider_Tank_RockpoxPlague",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 60,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 11,
+      "Resistances": {
+        "ElectricDamageMultiplier": 2.5,
+        "PoisonDamageMultiplier": 9
+      }
+    }
+  },
+  "Name": "ハザード  8-拡散性エセうつ病",
+  "Pools": {
+    "DisruptiveEnemyPoolCount": {
+      "max": 224,
+      "min": 160
+    },
+    "MinPoolSize": 192
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        10,
+        60
+      ]
+    }
+  }
+}

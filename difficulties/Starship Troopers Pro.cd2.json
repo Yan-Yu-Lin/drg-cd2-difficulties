@@ -1,0 +1,187 @@
+{
+  "Caps": {
+    "MaxActiveEnemies": 180,
+    "MaxActiveSwarmers": 180
+  },
+  "Description": "FOR VETERANS OF THE STARSHIP TROOPERS ELITE MOD, this mod changes spawn size, so expect to be swimming in bugs if you don't kill fast enough. The enemies still have Haz4 specifications (speed*, damage, resistance, ..) as regular Starship Troopers. I don't recommend this mod for player level below 999, and even then I saw high level players rush in the middle of a new cave, die and make the mission fail as everybody risks their live or die in rescue attempts. This is easily comparable to Hazard 9 or Hazard 10.",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 1.25,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": [
+      {
+        "max": 800,
+        "min": 700,
+        "weight": 7
+      },
+      {
+        "max": 1400,
+        "min": 1200,
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": [
+      2.25,
+      2.25,
+      3.45,
+      4.5
+    ],
+    "EnemyDamageModifier": [
+      2,
+      2.15,
+      2.3,
+      2.5
+    ],
+    "EnemyDamageResistance": [
+      1,
+      1,
+      1.2,
+      1.3
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 4,
+        "min": 3,
+        "weight": 2
+      },
+      {
+        "max": 6,
+        "min": 4,
+        "weight": 8
+      },
+      {
+        "max": 7,
+        "min": 7,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 120,
+        "min": 50,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 30,
+        "min": 20,
+        "weight": 9.5
+      },
+      {
+        "max": 70,
+        "min": 70,
+        "weight": 0.5
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 165,
+        "min": 125,
+        "weight": 2
+      },
+      {
+        "max": 300,
+        "min": 250,
+        "weight": 3
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.4,
+    "ExtraLargeEnemyDamageResistance": [
+      0.7,
+      0.75,
+      1,
+      1.6
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      0.6,
+      0.7,
+      0.9,
+      1.6
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      1.1,
+      1.1,
+      1.3,
+      1.5
+    ],
+    "FriendlyFireModifier": 0.9,
+    "PointExtractionScalar": 1.4,
+    "ProjectileSpeedModifier": 1.3,
+    "SpeedModifier": 1.1,
+    "StationaryDifficulty": [
+      {
+        "max": 800,
+        "min": 700,
+        "weight": 1
+      },
+      {
+        "max": 400,
+        "min": 250,
+        "weight": 6
+      },
+      {
+        "max": 450,
+        "min": 350,
+        "weight": 3
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 5,
+        "min": 3,
+        "weight": 1
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "max": 0.3,
+        "min": 0.2,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 2
+      },
+      {
+        "max": 0.7,
+        "min": 0.4,
+        "weight": 9
+      },
+      {
+        "max": 0.9,
+        "min": 0.6,
+        "weight": 2
+      },
+      {
+        "max": 1,
+        "min": 1,
+        "weight": 1
+      }
+    ]
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.75,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.1,
+    "NeutralDamageModifier": 0.1
+  },
+  "Name": "Starship Troopers Pro",
+  "Pools": {
+    "DisruptiveEnemyPoolCount": {
+      "max": 7,
+      "min": 7
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        40,
+        60
+      ]
+    }
+  }
+}

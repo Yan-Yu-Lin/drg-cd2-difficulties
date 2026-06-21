@@ -1,0 +1,126 @@
+{
+  "Caps": {
+    "MaxActiveCritters": 10,
+    "MaxActiveEnemies": 250,
+    "MaxActiveSwarmers": 80
+  },
+  "Description": "Send it! but much more brutal... hazard 5 scaling.",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 1.5,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": 3000,
+    "EnemyCountModifier": [
+      2,
+      2.2,
+      2.4,
+      2.7
+    ],
+    "EnemyDamageModifier": 3.4,
+    "EnemyDamageResistance": 1.5,
+    "EnemyDiversity": [
+      {
+        "max": 10,
+        "min": 9,
+        "weight": 1
+      },
+      {
+        "max": 14,
+        "min": 11,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveDifficulty": 0,
+    "EnemyNormalWaveInterval": 9999,
+    "EnemyWaveInterval": 9999,
+    "ExtraLargeEnemyDamageResistance": 1.7,
+    "ExtraLargeEnemyDamageResistanceB": 1.3,
+    "ExtraLargeEnemyDamageResistanceC": 1.3,
+    "ExtraLargeEnemyDamageResistanceD": 1.3,
+    "HealthRegenerationMax": 0.5,
+    "ProjectileSpeedModifier": 1.7,
+    "ReviveHealthRatio": 1,
+    "SmallEnemyDamageResistance": 1.2,
+    "SpeedModifier": 1.15,
+    "StationaryDifficulty": 3000,
+    "StationaryEnemyDiversity": 10
+  },
+  "Dwarves": {
+    "RegenDelayAfterDamage": 6,
+    "RegenHealthPerSecond": 7
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.95,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.1,
+    "NeutralDamageModifier": 0.1
+  },
+  "Name": "lommi-5x2",
+  "NitraMultiplier": 2,
+  "Pools": {
+    "DisruptiveEnemyPoolCount": {
+      "Max": 20,
+      "Min": 20
+    },
+    "MinPoolSize": 100,
+    "StationaryEnemyCount": {
+      "Max": 10,
+      "Min": 10
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "<=": 3,
+      "Else": 30,
+      "Mutate": "IfFloat",
+      "Then": 0,
+      "Value": {
+        "Mutate": "ResuppliesCalled"
+      }
+    }
+  },
+  "SpecialEncounters": [],
+  "WaveSpawners": [
+    {
+      "Difficulty": 1000,
+      "Distance": 4000,
+      "Diversity": [
+        {
+          "max": 4,
+          "min": 2,
+          "weight": 1
+        }
+      ],
+      "Enabled": true,
+      "Interval": 31,
+      "Locations": 3
+    },
+    {
+      "Difficulty": 1200,
+      "Distance": 5000,
+      "Diversity": [
+        {
+          "max": 8,
+          "min": 5,
+          "weight": 1
+        }
+      ],
+      "Enabled": true,
+      "Interval": 41,
+      "Locations": 2
+    },
+    {
+      "Difficulty": 1500,
+      "Distance": 6000,
+      "Enabled": true,
+      "Interval": 53,
+      "Locations": 2
+    },
+    {
+      "Difficulty": 2500,
+      "Distance": 6000,
+      "Enabled": true,
+      "Interval": 151,
+      "Locations": 1
+    }
+  ]
+}

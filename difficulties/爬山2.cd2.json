@@ -1,0 +1,554 @@
+{
+  "Caps": {
+    "MaxActiveCritters": 40,
+    "MaxActiveEnemies": {
+      "Mutate": "Ceil",
+      "Value": {
+        "A": 240,
+        "B": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            0.55,
+            0.7,
+            0.85,
+            1
+          ]
+        },
+        "C": {
+          "Condition": {
+            "A": {
+              "<": 4,
+              "Else": false,
+              "Mutate": "IfFloat",
+              "Then": true,
+              "Value": {
+                "Mutate": "DwarfCount"
+              }
+            },
+            "B": {
+              ">": 0,
+              "Else": false,
+              "Mutate": "IfFloat",
+              "Then": true,
+              "Value": {
+                "Mutate": "ScoutCount"
+              }
+            },
+            "Mutate": "And"
+          },
+          "Else": 1,
+          "Mutate": "If",
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              0.85,
+              0.9,
+              0.95,
+              1
+            ]
+          }
+        },
+        "Mutate": "Multiply"
+      }
+    },
+    "MaxActiveSwarmers": {
+      "Mutate": "Ceil",
+      "Value": {
+        "A": 360,
+        "B": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            0.55,
+            0.7,
+            0.85,
+            1
+          ]
+        },
+        "C": {
+          "Condition": {
+            "A": {
+              "<": 4,
+              "Else": false,
+              "Mutate": "IfFloat",
+              "Then": true,
+              "Value": {
+                "Mutate": "DwarfCount"
+              }
+            },
+            "B": {
+              ">": 0,
+              "Else": false,
+              "Mutate": "IfFloat",
+              "Then": true,
+              "Value": {
+                "Mutate": "ScoutCount"
+              }
+            },
+            "Mutate": "And"
+          },
+          "Else": 1,
+          "Mutate": "If",
+          "Then": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              0.85,
+              0.9,
+              0.95,
+              1
+            ]
+          }
+        },
+        "Mutate": "Multiply"
+      }
+    }
+  },
+  "Darkness": {
+    "FlareDuration": {
+      "<=": 2,
+      "Else": 30,
+      "Mutate": "IfFloat",
+      "Then": 45,
+      "Value": {
+        "Mutate": "DwarfCount"
+      }
+    },
+    "FlareGunDuration": {
+      "Default": 75,
+      "HollowBough": 100,
+      "IceCaves": 100,
+      "MagmaCaves": 100,
+      "Mutate": "ByBiome"
+    },
+    "FlareGunStrength": {
+      "Default": 1,
+      "HollowBough": 3,
+      "IceCaves": 3,
+      "MagmaCaves": 3,
+      "Mutate": "ByBiome"
+    },
+    "FlareMax": {
+      "<": 1,
+      "Else": 4,
+      "Mutate": "IfFloat",
+      "Then": 6,
+      "Value": {
+        "Mutate": "ScoutCount"
+      }
+    },
+    "FlareStrength": {
+      "<": 1,
+      "Else": 1,
+      "Mutate": "IfFloat",
+      "Then": 2,
+      "Value": {
+        "Mutate": "ScoutCount"
+      }
+    },
+    "FlashlightStrength": {
+      "<": 1,
+      "Else": 1,
+      "Mutate": "IfFloat",
+      "Then": 1.5,
+      "Value": {
+        "Mutate": "ScoutCount"
+      }
+    }
+  },
+  "Description": "cd2格式代码难度，修改时间2026/2/3",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 2.6,
+    "EncounterDifficulty": [
+      {
+        "max": {
+          "Default": 300,
+          "Elimination": 0,
+          "Mutate": "ByMissionType"
+        },
+        "min": {
+          "Default": 200,
+          "Elimination": 0,
+          "Mutate": "ByMissionType"
+        },
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": [
+      2.6,
+      2.8,
+      3,
+      3.2
+    ],
+    "EnemyDamageModifier": {
+      "A": 6.1,
+      "B": {
+        ">=": 3,
+        "Else": 1,
+        "Mutate": "IfFloat",
+        "Then": 0.5,
+        "Value": {
+          "Mutate": "DwarvesDown"
+        }
+      },
+      "Mutate": "Multiply"
+    },
+    "EnemyDamageResistance": [
+      1.8,
+      2.3,
+      2,
+      2.3
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 30,
+        "min": 20,
+        "weight": 5
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 1100,
+        "min": 900,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 210,
+        "min": 180,
+        "weight": 1
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 180,
+        "min": 130,
+        "weight": 1
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.6,
+    "ExtraLargeEnemyDamageResistance": [
+      2.6,
+      2.6,
+      2.6,
+      2.6
+    ],
+    "ExtraLargeEnemyDamageResistanceB": 0.01,
+    "ExtraLargeEnemyDamageResistanceC": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      2,
+      2.1,
+      2.25,
+      2.45
+    ],
+    "FriendlyFireModifier": 0.7,
+    "HealthRegenerationMax": {
+      "A": 0.25,
+      "B": {
+        ">=": 3,
+        "Else": 0,
+        "Mutate": "Iffloat",
+        "Then": 0.2,
+        "Value": {
+          "Mutate": "DwarvesDown"
+        }
+      },
+      "C": {
+        "<=": 2,
+        "Else": 0,
+        "Mutate": "Iffloat",
+        "Then": 0.1,
+        "Value": {
+          "Mutate": "IWsLeft"
+        }
+      },
+      "Mutate": "Add"
+    },
+    "PointExtractionScalar": 1.6,
+    "ProjectileSpeedModifier": 2.65,
+    "ReviveHealthRatio": {
+      "A": 0.25,
+      "B": {
+        ">=": 3,
+        "Else": 0,
+        "Mutate": "Iffloat",
+        "Then": 0.2,
+        "Value": {
+          "Mutate": "DwarvesDown"
+        }
+      },
+      "C": {
+        "<=": 2,
+        "Else": 0,
+        "Mutate": "Iffloat",
+        "Then": 0.1,
+        "Value": {
+          "Mutate": "IWsLeft"
+        }
+      },
+      "Mutate": "Add"
+    },
+    "SmallEnemyDamageResistance": [
+      1.2,
+      1.2,
+      1.2,
+      1.2
+    ],
+    "SpeedModifier": {
+      "A": 1.6,
+      "B": 1,
+      "Mutate": "Multiply"
+    },
+    "StationaryDifficulty": [
+      {
+        "max": {
+          "Default": 800,
+          "Elimination": 0,
+          "Mutate": "ByMissionType",
+          "Salvage": 1200
+        },
+        "min": {
+          "Default": 500,
+          "Elimination": 0,
+          "Mutate": "ByMissionType",
+          "Salvage": 1000
+        },
+        "weight": 1
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 20,
+        "min": 10,
+        "weight": 5
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "max": 0.175,
+        "min": 0.175,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 3
+      },
+      {
+        "max": 0.3,
+        "min": 0.15,
+        "weight": 9
+      },
+      {
+        "max": 0.6,
+        "min": 0.4,
+        "weight": 2
+      },
+      {
+        "max": 1,
+        "min": 1,
+        "weight": 0.5
+      }
+    ],
+    "WaveStartDelayScale": 0
+  },
+  "EnemiesNosync": {
+    "ED_BarrageInfector": {
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "DamageMultiplier": 2
+      }
+    },
+    "ED_Grabber": {
+      "Base": "ED_Spider_Grunt"
+    },
+    "ED_Shark": {
+      "Base": "ED_Spider_Grunt"
+    },
+    "ED_ShootingPlant": {
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "FireDamageMultiplier": 2.5,
+        "KineticDamageMultiplier": 1.2
+      }
+    },
+    "ED_ShootingPlant_Nuke": {
+      "Base": "ED_ShootingPlant",
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 300,
+      "Projectile": "PRJ_SpitballerNuke_C",
+      "Rarity": 5,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "FireDamageMultiplier": 2.5,
+        "KineticDamageMultiplier": 1.2
+      }
+    },
+    "ED_Spider_ExploderTank": {
+      "Base": "ED_Spider_Grunt",
+      "DifficultyRating": 1
+    },
+    "ED_TentaclePlant": {
+      "CanBeUsedInEncounters": false,
+      "Direct": {
+        "Float:MinDistanceBetweenNodes": 400,
+        "Float:PawnSensing.SightRadius": 4500
+      }
+    },
+    "ED_nitro": {
+      "Base": "ED_PumpkinLootBug",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 1,
+      "IdealSpawnSize": 1,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 0,
+      "Rarity": 30
+    }
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.85,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.01,
+    "NeutralDamageModifier": 0.1
+  },
+  "Messages": [
+    {
+      "Message": "有补给了!!",
+      "Send": {
+        ">=": 40,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "Mutate": "DepositedResource",
+          "Resource": "Nitra"
+        }
+      },
+      "Sender": "系统提示",
+      "Type": "Streamer"
+    }
+  ],
+  "Name": "爬山2",
+  "Pools": {
+    "CommonEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "DisruptiveEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "DisruptiveEnemyPoolCount": {
+      "max": 17,
+      "min": 13
+    },
+    "EnemyPool": {
+      "Add": [],
+      "Remove": [],
+      "clear": false
+    },
+    "MinPoolSize": 30,
+    "SpecialEnemies": {
+      "add": [],
+      "clear": false,
+      "remove": []
+    },
+    "StationaryEnemyCount": {
+      "max": 20,
+      "min": 15
+    },
+    "StationaryPool": {
+      "Add": [
+        "ED_ShootingPlant_Nuke"
+      ],
+      "Remove": [],
+      "clear": false
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        0,
+        {
+          "DeepScan": {
+            "A": 10,
+            "B": {
+              "A": {
+                "Max": 3,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 10,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          },
+          "Default": 40,
+          "Escort": {
+            "Default": 40,
+            "FinalEventA": 35,
+            "FinalEventB": 30,
+            "FinalEventC": 25,
+            "FinalEventD": 20,
+            "Finished": 20,
+            "Mutate": "ByEscortPhase"
+          },
+          "Mutate": "ByMissionType",
+          "Refinery": {
+            "A": 10,
+            "B": {
+              "A": {
+                "Max": 3,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 10,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          },
+          "Salvage": {
+            "A": 0,
+            "B": {
+              "A": {
+                "Max": 2,
+                "Min": 0,
+                "Mutate": "Clamp",
+                "Value": {
+                  "Mutate": "ResuppliesCalled"
+                }
+              },
+              "B": 20,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          }
+        }
+      ]
+    }
+  },
+  "SpecialEncounters": [],
+  "Warnings": {
+    "Banned": [
+      "MMUT_ExplosiveEnemies",
+      "WRN_NoOxygen",
+      "WRN_RockInfestation"
+    ]
+  }
+}

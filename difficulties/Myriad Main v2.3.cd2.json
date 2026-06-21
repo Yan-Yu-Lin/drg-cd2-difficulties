@@ -1,0 +1,757 @@
+{
+  "Caps": {
+    "MaxActiveEnemies": [
+      125,
+      200,
+      250,
+      300
+    ],
+    "MaxActiveSwarmers": 30
+  },
+  "DifficultySetting": {
+    "AttackCooldownModifier": 1.75,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": [
+      {
+        "max": {
+          "Default": 1000,
+          "Escort": 550,
+          "Mutate": "ByDNA",
+          "Salvage": 250
+        },
+        "min": {
+          "Default": 750,
+          "Escort": 500,
+          "Mutate": "ByDNA",
+          "Salvage": 200
+        },
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": {
+      "A": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          0.95,
+          1.05,
+          1.35,
+          1.65
+        ]
+      },
+      "B": 3,
+      "C": {
+        "Default": 1,
+        "Mutate": "ByDNA",
+        "Sabotage": {
+          "Condition": {
+            "Mutate": "DuringEncounters"
+          },
+          "Else": 1,
+          "Mutate": "If",
+          "Then": 0.33
+        }
+      },
+      "Mutate": "Multiply"
+    },
+    "EnemyDamageModifier": [
+      3.3,
+      3.65,
+      3.9,
+      4.1
+    ],
+    "EnemyDamageResistance": [
+      1.4,
+      1.5,
+      1.6,
+      1.75
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": {
+          "Condition": {
+            "A": {
+              "Mutate": "Not",
+              "Value": {
+                "Mutate": "DuringEncounters"
+              }
+            },
+            "B": {
+              "Default": false,
+              "Mutate": "ByEscortPhase",
+              "WaitingForFuel": true
+            },
+            "Mutate": "And"
+          },
+          "Else": 0,
+          "Mutate": "If",
+          "Then": 999999
+        }
+      },
+      {
+        "max": 13,
+        "min": 9,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 1000,
+        "min": 750,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            265,
+            245,
+            225,
+            205
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            235,
+            215,
+            195,
+            175
+          ]
+        },
+        "weight": 1
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            235,
+            215,
+            195,
+            175
+          ]
+        },
+        "min": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            205,
+            185,
+            165,
+            145
+          ]
+        },
+        "weight": 1
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.4,
+    "ExtraLargeEnemyDamageResistance": [
+      1,
+      1.3,
+      1.7,
+      2.1
+    ],
+    "ExtraLargeEnemyDamageResistanceB": [
+      1,
+      1.3,
+      1.5,
+      1.7
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      1,
+      1.3,
+      1.7,
+      2.1
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      1.5,
+      1.55,
+      1.75,
+      1.9
+    ],
+    "FriendlyFireModifier": 0.9,
+    "HealthRegenerationMax": 0.3,
+    "PointExtractionScalar": 1.4,
+    "ProjectileSpeedModifier": 1.9,
+    "ReviveHealthRatio": 0.3,
+    "SpeedModifier": 1.25,
+    "StationaryDifficulty": [
+      {
+        "max": {
+          "Default": 350,
+          "Escort": 250,
+          "Mutate": "ByDNA",
+          "Salvage": 150
+        },
+        "min": {
+          "Default": 250,
+          "Escort": 150,
+          "Mutate": "ByDNA",
+          "Salvage": 100
+        },
+        "weight": 1
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 5,
+        "min": 4,
+        "weight": 1
+      }
+    ],
+    "VeteranLarge": 0.2,
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 2
+      },
+      {
+        "max": 0.8,
+        "min": 0.5,
+        "weight": 2
+      }
+    ]
+  },
+  "EnemiesNoSync": {
+    "ED_BarrageInfector": {
+      "DifficultyRating": 250
+    },
+    "ED_Bulk_Weak": {
+      "Base": "ED_Spider_ExploderTank",
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 0,
+      "Resistances": {
+        "DamageMultiplier": 2
+      },
+      "Temperature": {
+        "BurnTemperature": 80,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200
+      }
+    },
+    "ED_CaveLeech": {
+      "CaveLeech": {
+        "MaxDropPlayerDuration": 10,
+        "TentacleSpeed": 1200
+      }
+    },
+    "ED_Core_Spawn_Crawler": {
+      "Base": "ED_Crawler",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 50,
+      "MaxSpawnCount": 2,
+      "Rarity": 6
+    },
+    "ED_Firebomber": {
+      "Base": "ED_Bomber_Explosive",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 175,
+      "MaxSpawnCount": 1,
+      "Rarity": 9
+    },
+    "ED_FlyingSmartRock": {
+      "Resistances": {
+        "DamageMultiplier": 3
+      }
+    },
+    "ED_Korlok_Sprout_Alert": {
+      "Alert": true,
+      "Base": "ED_Sprout_Normal",
+      "DifficultyRating": 75,
+      "SpawnAmountModifier": 0.4
+    },
+    "ED_Lacerator_Weak": {
+      "Base": "ED_Spider_Boss_TwinB",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 200,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 11,
+      "Resistances": {
+        "DamageMultiplier": 6
+      },
+      "Temperature": {
+        "BurnTemperature": 80,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200
+      }
+    },
+    "ED_Nemesis_Sabotage": {
+      "Base": "ED_Terminator",
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 0,
+      "Resistances": {
+        "DamageMultiplier": 2
+      }
+    },
+    "ED_PatrolBot": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 175,
+      "MaxSpawnCount": 1,
+      "Rarity": 9
+    },
+    "ED_PatrolBot_Weak": {
+      "Base": "ED_PatrolBot_Caretaker",
+      "DifficultyRating": 100,
+      "Resistances": {
+        "DamageMultiplier": 4
+      },
+      "Temperature": {
+        "BurnTemperature": 30
+      }
+    },
+    "ED_Prospector": {
+      "Base": "ED_Spider_Swarmer"
+    },
+    "ED_Sentinel": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 50,
+      "MaxSpawnCount": 3,
+      "Rarity": 4
+    },
+    "ED_Spider_ExploderTank": {
+      "Direct": {
+        "Int:NumClusterBombs": {
+          "Default": 8,
+          "Mutate": "ByMissionType",
+          "Salvage": 0
+        }
+      }
+    },
+    "ED_Spider_Grunt": {
+      "DifficultyRating": 8
+    },
+    "ED_Spider_ShieldTank": {
+      "Resistances": {
+        "PhysicalDamageMultiplier": 3.3
+      }
+    },
+    "ED_Spider_Shooter": {
+      "MaxSpawnCount": 2,
+      "Rarity": 5
+    },
+    "ED_Spider_Spawn": {
+      "CustomVeterans": {
+        "Default": "ED_Spider_Exploder",
+        "Escort": "ED_Spider_Grunt",
+        "Mutate": "ByDNA"
+      },
+      "SpawnSpread": 350
+    },
+    "ED_Spider_Stalker": {
+      "AttackDamageMultiplier": 0,
+      "StaggerDurationMultiplier": 1
+    },
+    "ED_Spider_Stinger": {
+      "DifficultyRating": 200,
+      "StaggerImmunityWindow": 0.5
+    },
+    "ED_WalkingPlagueheart": {
+      "Base": "ED_Spider_Swarmer"
+    },
+    "ED_Woodlouse": {
+      "DifficultyRating": 200
+    },
+    "ED_Woodlouse_Youngling": {
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 0,
+      "MinSpawnCount": 1,
+      "SpawnAmountModifier": 1e-06
+    }
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.9,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.9,
+    "NeutralDamageModifier": 0.9
+  },
+  "Name": "Myriad Main v2.3",
+  "Pools": {
+    "DisruptiveEnemyPoolCount": {
+      "max": 999999,
+      "min": 999999
+    },
+    "EnemyPool": {
+      "Add": [
+        "ED_Sentinel",
+        "ED_Core_Spawn_Crawler",
+        "ED_PatrolBot",
+        {
+          "Condition": {
+            "Default": true,
+            "Elimination": false,
+            "Mutate": "ByDNA"
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Lacerator_Weak"
+          ]
+        },
+        {
+          "Condition": {
+            "Mutate": "Not",
+            "Value": {
+              "A": {
+                "Mutate": "DuringDrillevator"
+              },
+              "B": {
+                "Default": false,
+                "Escort": true,
+                "Mutate": "ByDNA"
+              },
+              "Mutate": "Or"
+            }
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Firebomber"
+          ]
+        }
+      ],
+      "Remove": [
+        "ED_Spider_Exploder",
+        "ED_Grabber",
+        {
+          "Condition": {
+            "Mutate": "DuringExtraction"
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Spider_Stalker"
+          ]
+        },
+        {
+          "Condition": {
+            "A": {
+              "Mutate": "DuringExtraction"
+            },
+            "B": {
+              "Default": false,
+              "Egg": true,
+              "Elimination": true,
+              "Mining": true,
+              "Mutate": "ByDNA",
+              "Sabotage": true
+            },
+            "Mutate": "And"
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Jelly_Swarmer"
+          ]
+        },
+        {
+          "Condition": {
+            "A": {
+              "Mutate": "DuringDefend"
+            },
+            "B": {
+              "Mutate": "DuringDrillevator"
+            },
+            "C": {
+              "Mutate": "DuringExtraction"
+            },
+            "Mutate": "Or"
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Spider_ExploderTank"
+          ]
+        }
+      ]
+    },
+    "MinPoolSize": 999999,
+    "StationaryEnemyCount": {
+      "max": 999999,
+      "min": 999999
+    },
+    "StationaryPool": {
+      "Add": [
+        "ED_BarrageInfector",
+        {
+          "Condition": {
+            "ED": "ED_Sprout_Normal",
+            "Mutate": "DescriptorExists"
+          },
+          "Else": [],
+          "Mutate": "If",
+          "Then": [
+            "ED_Korlok_Sprout_Alert"
+          ]
+        }
+      ],
+      "Remove": [
+        "ED_TentaclePlant"
+      ]
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        30,
+        50
+      ]
+    }
+  },
+  "SpecialEncounters": [
+    {
+      "BaseChance": 0.5,
+      "CanSpawnInDeepDive": true,
+      "Enemy": "ED_TentaclePlant"
+    }
+  ],
+  "Warnings": {
+    "Banned": [
+      "MMUT_BloodSugar",
+      "MMUT_ExplosiveEnemies",
+      "MMUT_ExterminationContract",
+      "MMUT_LowGravity",
+      "MMUT_Weakspot",
+      "WRN_BulletHell",
+      "WRN_ExploderInfestation",
+      "WRN_Ghost",
+      "WRN_HeroEnemies",
+      "WRN_InfestedEnemies",
+      "WRN_LethalEnemies",
+      "WRN_MacteraCave",
+      "WRN_NoOxygen",
+      "WRN_NoShields",
+      "WRN_Plague",
+      "WRN_RegenerativeEnemies",
+      "WRN_RivalIncursion",
+      "WRN_RockInfestation",
+      "WRN_Swarmagedon"
+    ]
+  },
+  "WaveSpawners": [
+    {
+      "Difficulty": 30,
+      "Distance": 2500,
+      "Enabled": {
+        "A": {
+          "Mutate": "DuringMission",
+          "StartingAt": 120
+        },
+        "B": {
+          "Mutate": "Not",
+          "Value": {
+            "Mutate": "DuringExtraction"
+          }
+        },
+        "C": {
+          "Default": true,
+          "Escort": false,
+          "Mutate": "ByDNA"
+        },
+        "D": {
+          "Mutate": "Not",
+          "Value": {
+            "Mutate": "DuringDread"
+          }
+        },
+        "E": {
+          "==": 0,
+          "Else": false,
+          "Mutate": "IfFloat",
+          "Then": true,
+          "Value": {
+            "Mutate": "Delta",
+            "Value": {
+              "Mutate": "DwarvesDown"
+            }
+          }
+        },
+        "Mutate": "And"
+      },
+      "Interval": 30,
+      "Locations": 2,
+      "Name": "Mini Wave"
+    },
+    {
+      "Difficulty": 1000,
+      "Distance": 1250,
+      "Enabled": {
+        "A": {
+          "Mutate": "DuringMission",
+          "StartingAt": 10,
+          "StoppingAfter": 20
+        },
+        "B": {
+          "Default": false,
+          "Mining": true,
+          "Mutate": "ByDNA",
+          "Sabotage": true
+        },
+        "Mutate": "And"
+      },
+      "Interval": 999999,
+      "Locations": 3,
+      "Name": "First Room Encounter",
+      "SpawnOnEnable": true
+    },
+    {
+      "Difficulty": 125,
+      "Distance": 0,
+      "Enabled": {
+        "A": {
+          "Mutate": "DuringExtraction"
+        },
+        "B": {
+          "Default": false,
+          "Egg": true,
+          "Elimination": true,
+          "Mining": true,
+          "Mutate": "ByDNA",
+          "Sabotage": true
+        },
+        "Mutate": "And"
+      },
+      "Interval": 20,
+      "Locations": 1,
+      "Name": "Extraction Wave",
+      "SpawnOnEnable": true
+    },
+    {
+      "Difficulty": 125,
+      "Distance": 0,
+      "Enabled": {
+        "A": {
+          "Mutate": "DuringExtraction"
+        },
+        "B": {
+          "DeepScan": true,
+          "Default": false,
+          "Mutate": "ByDNA"
+        },
+        "Mutate": "And"
+      },
+      "Enemies": [
+        "ED_Spider_Spitter",
+        "ED_Mactera_Shooter_Normal",
+        "ED_Spider_RapidShooter",
+        "ED_Jelly_Swarmer",
+        "ED_Spider_Stinger"
+      ],
+      "Interval": 12.5,
+      "Locations": 1,
+      "Name": "Deep Scan Extraction Wave"
+    },
+    {
+      "Difficulty": 10,
+      "Distance": 1000,
+      "Enabled": {
+        "Mutate": "DuringDread"
+      },
+      "Enemies": [
+        "ED_Bulk_Weak"
+      ],
+      "Interval": {
+        "A": 30,
+        "B": {
+          "A": 15,
+          "B": {
+            "Mutate": "DwarvesDown"
+          },
+          "Mutate": "Multiply"
+        },
+        "Mutate": "Add"
+      },
+      "Locations": 1,
+      "Name": "Dread Support Wave Bulk"
+    },
+    {
+      "Difficulty": 125,
+      "Distance": 1000,
+      "Enabled": {
+        "Mutate": "DuringDread"
+      },
+      "Interval": {
+        "A": 30,
+        "B": {
+          "A": 15,
+          "B": {
+            "Mutate": "DwarvesDown"
+          },
+          "Mutate": "Multiply"
+        },
+        "Mutate": "Add"
+      },
+      "Locations": 1,
+      "Name": "Dread Support Wave Enemies"
+    },
+    {
+      "Difficulty": 1000,
+      "Distance": 3000,
+      "Enabled": {
+        "BetweenHacks": true,
+        "Default": false,
+        "HackingFinished": true,
+        "Mutate": "BySaboPhase"
+      },
+      "Enemies": [
+        "ED_PatrolBot_Weak",
+        "ED_Shredder"
+      ],
+      "Interval": 999999,
+      "Locations": 3,
+      "Name": "After Hack Bot Wave",
+      "SpawnOnEnable": true
+    },
+    {
+      "Difficulty": 10,
+      "Distance": 3000,
+      "Enabled": {
+        "Default": false,
+        "Mutate": "BySaboPhase",
+        "Phase1Eye": true,
+        "Phase1Vent": true,
+        "Phase2Eye": true,
+        "Phase2Vent": true,
+        "Phase3Eye": true,
+        "Phase3Vent": true
+      },
+      "Enemies": [
+        "ED_Nemesis_Sabotage"
+      ],
+      "Interval": {
+        "A": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            75,
+            60,
+            45,
+            30
+          ]
+        },
+        "B": {
+          "A": 15,
+          "B": {
+            "Mutate": "DwarvesDown"
+          },
+          "Mutate": "Multiply"
+        },
+        "Mutate": "Add"
+      },
+      "Locations": 1,
+      "Name": "Caretaker Support Wave",
+      "SpawnOnEnable": true
+    }
+  ]
+}

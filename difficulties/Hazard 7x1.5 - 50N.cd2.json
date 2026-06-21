@@ -1,0 +1,173 @@
+{
+  "Caps": {
+    "MaxActiveEnemies": [
+      90,
+      120,
+      180
+    ],
+    "MaxActiveSwarmers": [
+      90,
+      120,
+      180
+    ]
+  },
+  "DifficultySetting": {
+    "AttackCooldownModifier": 2,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": [
+      {
+        "max": 850,
+        "min": 650,
+        "weight": 1
+      },
+      {
+        "max": 750,
+        "min": 550,
+        "weight": 6
+      },
+      {
+        "max": 650,
+        "min": 550,
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": [
+      1.725,
+      1.875,
+      2.175,
+      2.625
+    ],
+    "EnemyDamageModifier": [
+      3.8,
+      4.1,
+      4.4,
+      4.6
+    ],
+    "EnemyDamageResistance": [
+      1.6,
+      1.8,
+      1.9,
+      2
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 6,
+        "min": 5,
+        "weight": 2
+      },
+      {
+        "max": 7,
+        "min": 7,
+        "weight": 8
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 750,
+        "min": 650,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 200,
+        "min": 160,
+        "weight": 4
+      },
+      {
+        "max": 190,
+        "min": 180,
+        "weight": 2
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 150,
+        "min": 120,
+        "weight": 7.5
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.6,
+    "ExtraLargeEnemyDamageResistance": [
+      1.4,
+      1.7,
+      2,
+      2.5
+    ],
+    "ExtraLargeEnemyDamageResistanceB": [
+      1.4,
+      1.7,
+      2,
+      2.5
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      1.4,
+      1.7,
+      2,
+      2.5
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      2,
+      2.1,
+      2.25,
+      2.45
+    ],
+    "FriendlyFireModifier": 0.9,
+    "PointExtractionScalar": 1.6,
+    "ProjectileSpeedModifier": 1.9,
+    "SpeedModifier": 1.35,
+    "StationaryDifficulty": [
+      {
+        "max": 600,
+        "min": 450,
+        "weight": 1
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 6,
+        "min": 5,
+        "weight": 1
+      }
+    ],
+    "VeteranLarge": 0.225,
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 2
+      },
+      {
+        "max": 0.8,
+        "min": 0.7,
+        "weight": 9
+      },
+      {
+        "max": 0.9,
+        "min": 0.6,
+        "weight": 2
+      }
+    ]
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.75,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.1,
+    "NeutralDamageModifier": 0.1
+  },
+  "Name": "Hazard 7x1.5 - 50N",
+  "Pools": {
+    "DisruptiveEnemyPoolCount": {
+      "Max": 9,
+      "Min": 8
+    },
+    "MinPoolSize": 14,
+    "StationaryEnemyCount": {
+      "Max": 6,
+      "Min": 6
+    }
+  },
+  "Resupply": {
+    "Cost": 50
+  }
+}

@@ -1,0 +1,2097 @@
+{
+  "Caps": {
+    "MaxActiveEnemies": [
+      60,
+      80,
+      120,
+      150
+    ],
+    "MaxActiveSwarmers": [
+      60,
+      80,
+      120,
+      150
+    ]
+  },
+  "DifficultySetting": {
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": 600,
+    "EnemyCountModifier": {
+      "A": {
+        "Mutate": "ByPlayerCount",
+        "Values": [
+          1.05,
+          1.7,
+          2.45,
+          3
+        ]
+      },
+      "B": {
+        "Condition": {
+          "Mutate": "DuringExtraction"
+        },
+        "Else": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            1.05,
+            1.7,
+            2.45,
+            3
+          ]
+        },
+        "Mutate": "If",
+        "Then": {
+          "Default": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1.05,
+              1.7,
+              2.45,
+              3
+            ]
+          },
+          "Mutate": "ByMissionType",
+          "PE": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1.05,
+              1.7,
+              2.45,
+              3
+            ]
+          },
+          "Salvage": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1.05,
+              1.7,
+              2.45,
+              3
+            ]
+          }
+        }
+      },
+      "Mutate": "Multiply"
+    },
+    "EnemyDiversity": {
+      "max": 10,
+      "min": 5,
+      "weight": 1
+    },
+    "EnemyNormalWaveDifficulty": 200,
+    "EnemyNormalWaveInterval": {
+      "A": 21.5,
+      "B": {
+        "A": 15,
+        "B": {
+          "==": 1,
+          "Else": {
+            "==": 2,
+            "Else": {
+              "==": 3,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 1.5,
+              "Value": {
+                "Mutate": "DwarvesDown"
+              }
+            },
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "Mutate": "DwarvesDown"
+            }
+          },
+          "Mutate": "IfFloat",
+          "Then": 0.5,
+          "Value": {
+            "Mutate": "DwarvesDown"
+          }
+        },
+        "Mutate": "Multiply"
+      },
+      "Mutate": "Add"
+    },
+    "EnemyWaveInterval": [
+      {
+        "max": 1200000,
+        "min": 1200000,
+        "weight": 7.5
+      }
+    ],
+    "ReviveHealthRatio": 0.5,
+    "StationaryDifficulty": 950,
+    "StationaryEnemyDiversity": [
+      {
+        "max": 24,
+        "min": 24,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0.8,
+        "min": 0.7,
+        "weight": 1
+      }
+    ]
+  },
+  "Dwarves": {
+    "Test": true
+  },
+  "EnemiesNoSync": {
+    "ED_BarrageInfector": {
+      "DifficultyRating": 250
+    },
+    "ED_FlyingSmartRock": {
+      "Resistances": {
+        "DamageMultiplier": 2
+      }
+    },
+    "ED_Grabber": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 70,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5.25,
+      "SpawnAmountModifier": 0.5,
+      "SpawnSpread": 5000
+    },
+    "ED_Jelly_Swarmer": {
+      "MaxSpawnCount": 8
+    },
+    "ED_Mactera_Shooter_HeavyVeteran": {
+      "AttackDamageMultiplier": 0.25,
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "Courage": 0.7,
+      "DifficultyRating": 350,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_NormalBlasterShot",
+      "Rarity": 2.5,
+      "Resistances": {
+        "DamageMultiplier": 2.8
+      },
+      "SpawnAmountModifier": 0.2,
+      "StaggerDurationMultiplier": 0.7,
+      "Temperature": {
+        "BurnTemperature": 35,
+        "CoolingRate": 10,
+        "DouseFireTemperature": 5,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "WarmingRate": 40
+      }
+    },
+    "ED_Mactera_Shooter_Normal": {
+      "MaxSpawnCount": 2,
+      "Rarity": 3.5
+    },
+    "ED_Mactera_TripleShooter": {
+      "AttackDamageMultiplier": 1,
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "MaxSpawnCount": 2,
+      "Projectile": "PRJ_PatrolBotRocket_C",
+      "Rarity": 2.5
+    },
+    "ED_Ossiran_Scrab": {
+      "MaxSpawnCount": 12
+    },
+    "ED_Prospector": {
+      "Base": "ED_Spider_Grunt"
+    },
+    "ED_Spider_Buffer": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false
+    },
+    "ED_Spider_Exploder": {
+      "MaxSpawnCount": 10
+    },
+    "ED_Spider_ExploderTank": {
+      "DifficultyRating": 300,
+      "MaxSpawnCount": 1,
+      "Rarity": 2,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.25,
+        "DamageMultiplier": 1.5
+      }
+    },
+    "ED_Spider_Grunt": {
+      "Courage": {
+        ">=": 1,
+        "Else": 0.4,
+        "Mutate": "IfFloat",
+        "Then": 1,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      },
+      "DifficultyRating": 5,
+      "Heal": {
+        "FinalRate": {
+          ">=": 1,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.0001,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 10,
+              "Value": {
+                "Default": 1,
+                "ED": "elitewarden",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyHealth"
+            }
+          },
+          "Value": {
+            "ED": "elitewarden",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "SwitchAfter": 0
+      },
+      "SpawnAmountModifier": 0.5,
+      "StaggerDurationMultiplier": {
+        ">=": 1,
+        "Else": 1,
+        "Mutate": "IfFloat",
+        "Then": 0,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    "ED_Spider_Grunt_Attacker": {
+      "Courage": {
+        ">=": 1,
+        "Else": 0.4,
+        "Mutate": "IfFloat",
+        "Then": 1,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      },
+      "Heal": {
+        "FinalRate": {
+          ">=": 1,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.0001,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 10,
+              "Value": {
+                "Default": 1,
+                "ED": "elitewarden",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyHealth"
+            }
+          },
+          "Value": {
+            "ED": "elitewarden",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "SwitchAfter": 0
+      },
+      "StaggerDurationMultiplier": {
+        ">=": 1,
+        "Else": 1,
+        "Mutate": "IfFloat",
+        "Then": 0,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    "ED_Spider_Grunt_Guard": {
+      "Courage": {
+        ">=": 1,
+        "Else": 0.4,
+        "Mutate": "IfFloat",
+        "Then": 1,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      },
+      "Heal": {
+        "FinalRate": {
+          ">=": 1,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.0001,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 10,
+              "Value": {
+                "Default": 1,
+                "ED": "elitewarden",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyHealth"
+            }
+          },
+          "Value": {
+            "ED": "elitewarden",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "SwitchAfter": 0
+      },
+      "StaggerDurationMultiplier": {
+        ">=": 1,
+        "Else": 1,
+        "Mutate": "IfFloat",
+        "Then": 0,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    "ED_Spider_Lobber": {
+      "MaxSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Shooter_Ground_C",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 2.5,
+        "Mutate": "If",
+        "Then": 10
+      },
+      "TimeDilation": 1.3
+    },
+    "ED_Spider_ShieldTank": {
+      "AttackDamageMultiplier": 0.65,
+      "Base": "ED_Spider_ShieldTank",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 100,
+      "Direct": {
+        "Float:TremorAttack.LaunchForce": 1200
+      },
+      "MaxSpawnCount": 2,
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 5.5,
+        "Mutate": "If",
+        "Then": 12
+      },
+      "Resistances": {
+        "ColdDamageMultiplier": 0.3,
+        "CorrosiveDamageMultiplier": 0.3,
+        "DamageMultiplier": 4.5,
+        "ElectricDamageMultiplier": 0.3,
+        "ExplosionDamageMultiplier": 0.3,
+        "FireDamageMultiplier": 0.3,
+        "InternalDamageMultiplier": 0.4,
+        "PoisonDamageMultiplier": 0.45,
+        "RadiationDamageMultiplier": 0.3
+      },
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Shooter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 35,
+      "MaxSpawnCount": 20,
+      "Rarity": 5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Spawn": {
+      "Base": "ED_Ossiran_Scrab",
+      "Resistances": {
+        "DamageMultiplier": 1.5
+      }
+    },
+    "ED_Spider_Spitter": {
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 35,
+      "MaxSpawnCount": 8,
+      "Rarity": 5,
+      "SpawnAmountModifier": 1
+    },
+    "ED_Spider_Stinger": {
+      "MaxSpawnCount": 1
+    },
+    "ED_Spider_Swarmer_Pheromone_NOFX": {
+      "Base": "ED_Spider_Grunt",
+      "Courage": {
+        ">=": 1,
+        "Else": 0.4,
+        "Mutate": "IfFloat",
+        "Then": 1,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      },
+      "Heal": {
+        "FinalRate": {
+          ">=": 1,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.0001,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 10,
+              "Value": {
+                "Default": 1,
+                "ED": "elitewarden",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyHealth"
+            }
+          },
+          "Value": {
+            "ED": "elitewarden",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "SwitchAfter": 0
+      },
+      "MaxSpawnCount": 9,
+      "Movement": {
+        "MaxPawnSpeed": 1.3,
+        "StrafeSpeed": 1.3
+      },
+      "Resistances": {
+        "DamageMultiplier": 1.5
+      },
+      "Significance": "Swarmer",
+      "StaggerDurationMultiplier": {
+        ">=": 1,
+        "Else": 1,
+        "Mutate": "IfFloat",
+        "Then": 0.3,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    "ED_Spider_Tank": {
+      "Rarity": 3.5,
+      "Resistances": {
+        "DamageMultiplier": 3
+      }
+    },
+    "ED_StabberVine": {
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 9999,
+      "MinSpawnCount": 1,
+      "Rarity": 3,
+      "SpawnAmountModifier": 0.75
+    },
+    "ED_Terminator": {
+      "Base": "ED_Spider_Grunt"
+    },
+    "ED_TunnelSwarmer": {
+      "Base": "ED_Spider_Grunt_Attacker",
+      "Heal": {
+        "FinalRate": {
+          ">=": 1,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.0001,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 0,
+              "Mutate": "IfFloat",
+              "Then": 5,
+              "Value": {
+                "Default": 1,
+                "ED": "elitewarden",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyHealth"
+            }
+          },
+          "Value": {
+            "ED": "elitewarden",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "SwitchAfter": 0
+      },
+      "Resistances": {
+        "DamageMultiplier": 6
+      },
+      "Significance": "Swarmer"
+    },
+    "ED_WalkingPlagueheart": {
+      "Base": "ED_Spider_Grunt"
+    },
+    "ED_Woodlouse_Youngling": {
+      "DifficultyRating": 400,
+      "MaxSpawnCount": 1,
+      "Rarity": 10,
+      "Resistances": {
+        "DamageMultiplier": 2.5
+      },
+      "SpawnAmountModifier": 0.5
+    },
+    "acidspitter": {
+      "AttackDamageMultiplier": 0.42,
+      "Base": "ED_Spider_Shooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_WoodlouseAttack_C",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 3,
+        "Mutate": "If",
+        "Then": 3
+      },
+      "Resistances": {
+        "DamageMultiplier": 1
+      },
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "BurnTemperature": 35,
+        "CoolingRate": 6,
+        "DouseFireTemperature": 5,
+        "FreezeTemperature": -50,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": 0,
+        "WarmingRate": 6
+      }
+    },
+    "arbalest": {
+      "AttackDamageMultiplier": 0.1,
+      "Base": "ED_Spider_Boss_TwinA",
+      "Direct": {
+        "Float:HealthDamageTracker.TiggeronPercentage": 1
+      },
+      "Projectile": "PRJ_Grenade_StickySmall_C",
+      "Resistances": {
+        "DamageMultiplier": 27
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 20,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      }
+    },
+    "bomber": {
+      "Base": "ED_Bomber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Lobber_Projectile_C",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 2.5,
+        "Mutate": "If",
+        "Then": 8
+      },
+      "Resistances": {
+        "DamageMultiplier": 1.3
+      },
+      "SpawnAmountModifier": 0.15
+    },
+    "bombstone": {
+      "Base": "ED_FlyingSmartRock",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 2000,
+      "Heal": {
+        "FinalRate": -999999984306749440,
+        "SwitchAfter": 14
+      },
+      "MaxSpawnCount": 1,
+      "Rarity": 6.5,
+      "SpawnAmountModifier": 0.05,
+      "SpawnSpread": 0
+    },
+    "breeder": {
+      "AttackDamageMultiplier": 1,
+      "Base": "ED_JellyBreeder",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "JellyBreeder": {
+        "TimeBetweenBursts": 12,
+        "TimeBetweenEggs": 1
+      },
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_HomingDrone_C",
+      "SpawnAmountModifier": 0.5,
+      "Temperature": {
+        "BurnTemperature": 60,
+        "CoolingRate": 10,
+        "DouseFireTemperature": 30,
+        "FreezeTemperature": -300,
+        "TemperatureChangeScale": 1,
+        "WarmingRate": 10
+      }
+    },
+    "brundle": {
+      "AttackDamageMultiplier": 0.25,
+      "Base": "ED_Mactera_Shooter_HeavyVeteran",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Courage": 0.7,
+      "DifficultyRating": 350,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_NormalBlasterShot",
+      "Rarity": 2.5,
+      "Resistances": {
+        "DamageMultiplier": 2.8
+      },
+      "SpawnAmountModifier": 0.2,
+      "StaggerDurationMultiplier": 0.7,
+      "Temperature": {
+        "BurnTemperature": 35,
+        "CoolingRate": 10,
+        "DouseFireTemperature": 5,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "WarmingRate": 40
+      }
+    },
+    "dreadnought": {
+      "AttackDamageMultiplier": 0.5,
+      "Base": "ED_Spider_Tank_Boss",
+      "Projectile": "PRJ_Terminator_Barrier",
+      "Resistances": {
+        "DamageMultiplier": 75
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 40,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      }
+    },
+    "elitepatrolbot": {
+      "AttackDamageMultiplier": 0.35,
+      "Base": "ED_PatrolBot",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "Direct": {
+        "Float:DelayAfterLockOn": 0,
+        "Float:FlyingAttackCooldown": {
+          "<=": 300,
+          "Else": {
+            "<=": 1000,
+            "Else": 0.25,
+            "Mutate": "IfFloat",
+            "Then": 0.15,
+            "Value": {
+              "Default": 1,
+              "ED": "elitepatrolbot",
+              "Mutate": "EnemyDistance",
+              "Type": "Average"
+            }
+          },
+          "Mutate": "IfFloat",
+          "Then": 2,
+          "Value": {
+            "Default": 1,
+            "ED": "elitepatrolbot",
+            "Mutate": "EnemyDistance",
+            "Type": "Average"
+          }
+        },
+        "Float:GunRange": 300,
+        "Float:HackChance": 0,
+        "Float:JumpForce": 2500,
+        "Float:MaxFlyingTime": 10,
+        "Float:MaxRollingTime": 10,
+        "Float:MinFlyingTime": 10,
+        "Float:MinRollingTime": 10,
+        "Float:RollingAttackCooldown": {
+          "<=": 300,
+          "Else": {
+            "<=": 1000,
+            "Else": 0.8,
+            "Mutate": "IfFloat",
+            "Then": 0.15,
+            "Value": {
+              "Default": 1,
+              "ED": "elitepatrolbot",
+              "Mutate": "EnemyDistance",
+              "Type": "Average"
+            }
+          },
+          "Mutate": "IfFloat",
+          "Then": 2,
+          "Value": {
+            "Default": 1,
+            "ED": "elitepatrolbot",
+            "Mutate": "EnemyDistance",
+            "Type": "Average"
+          }
+        },
+        "Float:SpawnRocketsChance": 0,
+        "Float:SpawnRocketsTime": 0
+      },
+      "DropResource": {
+        "Amount": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            80,
+            145,
+            217,
+            290
+          ]
+        },
+        "Enable": true,
+        "GoombaOnly": false,
+        "LaunchStrength": 3,
+        "Resource": "RedSugar"
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Spider_Tank",
+      "Projectile": {
+        "<=": 300,
+        "Else": {
+          "<=": 1000,
+          "Else": "PRJ_PatrolBotRocket_C",
+          "Mutate": "IfFloat",
+          "Then": "PRJ_PatrolBotLaser_New",
+          "Value": {
+            "Default": 1,
+            "ED": "elitepatrolbot",
+            "Mutate": "EnemyDistance",
+            "Type": "Average"
+          }
+        },
+        "Mutate": "IfFloat",
+        "Then": "PRJ_Turret_Barrier_C",
+        "Value": {
+          "Default": 1,
+          "ED": "elitepatrolbot",
+          "Mutate": "EnemyDistance",
+          "Type": "Average"
+        }
+      },
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.8,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.8,
+        "FireDamageMultiplier": 2.5
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 40,
+        "DieIfBurning": true,
+        "DouseFireTemperature": 0,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 0.5,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 35
+      }
+    },
+    "elitespreaderenotnow": {
+      "AttackDamageMultiplier": 1.1,
+      "Base": "ED_Spider_Lobber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 250,
+        "Mutate": "If",
+        "Then": 500
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Spider_Grunt_Attacker",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Shooter_Ground",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 3.5,
+        "Mutate": "If",
+        "Then": 8
+      },
+      "Resistances": {
+        "DamageMultiplier": 0.8
+      },
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 500,
+      "Temperature": {
+        "BurnTemperature": 35,
+        "CoolingRate": 6,
+        "DouseFireTemperature": 5,
+        "FreezeTemperature": -50,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": 0,
+        "WarmingRate": 6
+      },
+      "TimeDilation": 1.25
+    },
+    "elitewarden": {
+      "AttackDamageMultiplier": 0.1,
+      "Base": "ED_Spider_Buffer",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Courage": 1,
+      "DropResource": {
+        "Amount": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            80,
+            145,
+            217,
+            290
+          ]
+        },
+        "Enable": true,
+        "GoombaOnly": false,
+        "LaunchStrength": 3,
+        "Resource": "RedSugar"
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Spider_Grunt_Attacker",
+      "MaxSpawnCount": 1,
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.8,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.8,
+        "FireDamageMultiplier": 2.5
+      },
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 1200,
+      "StaggerDurationMultiplier": 0,
+      "StaggerImmunityWindow": 9999,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 25,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -150,
+        "WarmingRate": 50
+      }
+    },
+    "firebomber": {
+      "AttackDamageMultiplier": 0.3,
+      "Base": "ED_Bomber_Explosive",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Courage": 0.6,
+      "DifficultyRating": 150,
+      "ForceEliteBase": "ED_Spider_Grunt_Attacker",
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Boss_Heavy_FireballBallistics",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 3.5,
+        "Mutate": "If",
+        "Then": 8
+      },
+      "Resistances": {
+        "DamageMultiplier": 1.3
+      }
+    },
+    "icebomber": {
+      "AttackDamageMultiplier": 0.2,
+      "Base": "ED_Bomber_Ice",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Crye_SnowBall_C",
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 4.5,
+        "Mutate": "If",
+        "Then": 9
+      },
+      "Resistances": {
+        "DamageMultiplier": 1.3
+      },
+      "SpawnAmountModifier": 0.5,
+      "Temperature": {
+        "DieIfFrozen": false
+      }
+    },
+    "instantexploder": {
+      "Base": "ED_Spider_Exploder",
+      "Heal": {
+        "FinalRate": -999999984306749440,
+        "SwitchAfter": 0.5
+      },
+      "SpawnSpread": 0,
+      "UsesBiomeVariants": false
+    },
+    "lacerator": {
+      "AttackDamageMultiplier": 0.35,
+      "Base": "ED_Spider_Boss_TwinB",
+      "Direct": {
+        "Float:EnemyBuffer.BuffRadius": 0,
+        "Float:ThreeWayAttack.MaxSurfaceAngle": 180,
+        "Int:EnemyBuffer.MaxBuffedTargets": 0
+      },
+      "Projectile": "PRJ_FlameWall",
+      "Resistances": {
+        "DamageMultiplier": 27
+      },
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 20,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -100,
+        "WarmingRate": 50
+      }
+    },
+    "manace": {
+      "Base": "ED_Spider_RapidShooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "Courage": 1,
+      "DifficultyRating": 150,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_PlatformMaker_C",
+      "Rarity": 4.5,
+      "SpawnAmountModifier": 0.3,
+      "StaggerDurationMultiplier": 0.001,
+      "StaggerImmunityWindow": 999,
+      "TimeDilation": 0.9
+    },
+    "minebombbarrage": {
+      "Base": "ED_BarrageInfector",
+      "DifficultyRating": 250,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Boss_Twin_Mine_C",
+      "Rarity": 1.5,
+      "SpawnAmountModifier": 1,
+      "Temperature": {
+        "BurnTemperature": 60,
+        "CoolingRate": 6,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -80,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -40,
+        "WarmingRate": 6
+      }
+    },
+    "oppressor": {
+      "AttackDamageMultiplier": 0.65,
+      "Base": "ED_Spider_ShieldTank",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 100,
+      "Direct": {
+        "Float:TremorAttack.LaunchForce": 1200
+      },
+      "MaxSpawnCount": 2,
+      "Rarity": {
+        "Condition": {
+          "Mutate": "DuringDefend"
+        },
+        "Else": 5.5,
+        "Mutate": "If",
+        "Then": 12
+      },
+      "Resistances": {
+        "ColdDamageMultiplier": 0.3,
+        "CorrosiveDamageMultiplier": 0.3,
+        "DamageMultiplier": 4.5,
+        "ElectricDamageMultiplier": 0.3,
+        "ExplosionDamageMultiplier": 0.3,
+        "FireDamageMultiplier": 0.3,
+        "InternalDamageMultiplier": 0.4,
+        "PoisonDamageMultiplier": 0.45,
+        "RadiationDamageMultiplier": 0.3
+      },
+      "SpawnAmountModifier": 1
+    },
+    "platformsniper": {
+      "Base": "ED_FacilityTurret_Sniper",
+      "DifficultyRating": 500,
+      "Direct": {
+        "Float:BurstInterval": 0.3,
+        "Float:LockOnTime": 0.05,
+        "Float:RaimainAfterShotTime": 0.75,
+        "Float:TurretRotationSpeed": 8
+      },
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_PlatformMaker_C",
+      "Rarity": 5,
+      "Resistances": {
+        "DamageMultiplier": 3
+      },
+      "SpawnAmountModifier": 0.05,
+      "SpawnSpread": 1000
+    },
+    "scrabnexus": {
+      "Base": "ED_SpiderSpawner"
+    },
+    "shellback": {
+      "Base": "ED_Woodlouse",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "Direct": {
+        "Float:BumpDamage": 0.75,
+        "Float:BumpPower": 0,
+        "Float:BumpRange": 200,
+        "Float:BurstTime": 0.1,
+        "Float:BurstXOffset": 150,
+        "Float:BurstYOffset": 150,
+        "Float:BurstZOffset": 150,
+        "Float:ChanceToWalk": 0,
+        "Float:DirectionalBumpPower": 0,
+        "Float:FoldedStateMaxTime": 0.1,
+        "Float:FoldedStateMinTime": 0.1,
+        "Float:ForgetRange": 10,
+        "Float:ForgetTime": 0.1,
+        "Float:MaxBumpDamage": 0.75,
+        "Float:MaxBumpPower": 0,
+        "Float:MinBumpDamage": 0.75,
+        "Float:RefreshTimeMax": 0.1,
+        "Float:RefreshTimeMin": 0.1,
+        "PCol:Capsule": false,
+        "PCol:Mesh": false
+      },
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Tank_Boss_Eggshot_C",
+      "Rarity": 3,
+      "Resistances": {
+        "DamageMultiplier": 1.3
+      },
+      "SpawnAmountModifier": 0.5,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 10,
+        "DouseFireTemperature": 70,
+        "FreezeTemperature": -120,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -90,
+        "WarmingRate": 10
+      }
+    },
+    "spliter": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "Courage": 1,
+      "DropResource": {
+        "Amount": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            80,
+            145,
+            217,
+            290
+          ]
+        },
+        "Enable": true,
+        "GoombaOnly": false,
+        "LaunchStrength": 3,
+        "Resource": "RedSugar"
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Spider_Tank",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.8,
+        "DamageMultiplier": 0.2,
+        "ElectricDamageMultiplier": 1.8,
+        "FireDamageMultiplier": 2.5
+      },
+      "SpawnSpread": 1400,
+      "Spawner": {
+        "ED": "spliter_sentinel",
+        "Interval": 1.6,
+        "IntervalSpawnCount": {
+          ">=": 1,
+          "Else": 1,
+          "Mutate": "IfFloat",
+          "Then": {
+            ">=": 0.001,
+            "Else": 1,
+            "Mutate": "IfFloat",
+            "Then": {
+              "<=": 0.5,
+              "Else": 1,
+              "Mutate": "IfFloat",
+              "Then": 2,
+              "Value": {
+                "Default": 1,
+                "ED": "spliter",
+                "Mutate": "EnemyHealth",
+                "Type": "Min"
+              }
+            },
+            "Value": {
+              "Default": 1,
+              "ED": "spliter",
+              "Mutate": "EnemyHealth",
+              "Type": "Min"
+            }
+          },
+          "Value": {
+            "ED": "spliter",
+            "Mutate": "EnemyCount"
+          }
+        },
+        "MaxSpawns": 12,
+        "OnDeathKillSpawns": true
+      },
+      "StaggerDurationMultiplier": 0,
+      "StaggerImmunityWindow": 9999,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 25,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -150,
+        "WarmingRate": 50
+      },
+      "TimeDilation": 0.75
+    },
+    "spliter_sentinel": {
+      "AttackDamageMultiplier": 0.66,
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "Heal": {
+        "==": 0,
+        "Else": 0,
+        "Mutate": "IfFloat",
+        "Then": {
+          "<=": 0.0001,
+          "Else": 0,
+          "Mutate": "IfFloat",
+          "Then": -100000000,
+          "Value": {
+            "ED": "spliter",
+            "Mutate": "EnemyHealth"
+          }
+        },
+        "Value": {
+          "ED": "spliter",
+          "Mutate": "EnemyCount"
+        }
+      },
+      "Movement": {
+        "MaxPawnSpeed": 1.3,
+        "StrafeSpeed": 1.3
+      },
+      "Resistances": {
+        "DamageMultiplier": 2
+      },
+      "SpawnSpread": 800,
+      "TimeDilation": 1.1
+    },
+    "stomp_barrier": {
+      "AttackDamageMultiplier": 0.55,
+      "Base": "ED_FacilityTurret_Barrier",
+      "DifficultyRating": 1,
+      "Heal": {
+        "FinalRate": -5999999979507775700992,
+        "SwitchAfter": 4
+      },
+      "Projectile": "PRJ_Boss_Twin_Stomp_C",
+      "Resistances": {
+        "DamageMultiplier": 1e-06
+      },
+      "SpawnSpread": 0,
+      "Temperature": {
+        "DieIfBurning": false
+      },
+      "TimeDilation": 0.9
+    },
+    "stomper": {
+      "Base": "ED_Spider_Tank_Amber",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "Courage": 1,
+      "DropResource": {
+        "Amount": {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            80,
+            145,
+            217,
+            290
+          ]
+        },
+        "Enable": true,
+        "GoombaOnly": false,
+        "LaunchStrength": 3,
+        "Resource": "RedSugar"
+      },
+      "Elite": true,
+      "ForceEliteBase": "ED_Spider_Tank",
+      "Resistances": {
+        "CorrosiveDamageMultiplier": 1.7,
+        "DamageMultiplier": 0.35,
+        "ElectricDamageMultiplier": 1.7,
+        "FireDamageMultiplier": 2.4
+      },
+      "Significance": "Critical",
+      "SpawnSpread": 1400,
+      "Spawner": {
+        "ED": "stomp_barrier",
+        "Interval": 14,
+        "IntervalSpawnCount": 1,
+        "MaxSpawns": 12,
+        "OnDeathKillSpawns": true,
+        "OnSpawnDelay": 5,
+        "OnlySpawnOnAlert": true
+      },
+      "StaggerDurationMultiplier": 0,
+      "StaggerImmunityWindow": 9999,
+      "Temperature": {
+        "BurnTemperature": 100,
+        "CoolingRate": 25,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -200,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -150,
+        "WarmingRate": 50
+      },
+      "TimeDilation": 0.8
+    },
+    "trijaw": {
+      "AttackDamageMultiplier": 1,
+      "Base": "ED_Mactera_TripleShooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_PatrolBotRocket_C",
+      "SpawnAmountModifier": 1
+    },
+    "webspitter": {
+      "Base": "ED_Spider_Spitter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 3,
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Rockpox_Breeder_WormVomit",
+      "Rarity": 1.5,
+      "Resistances": {
+        "DamageMultiplier": 1
+      },
+      "Temperature": {
+        "BurnTemperature": 30,
+        "CoolingRate": 6,
+        "DouseFireTemperature": 0,
+        "FreezeTemperature": -75,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": 0,
+        "WarmingRate": 10
+      }
+    },
+    "webvartok": {
+      "AttackDamageMultiplier": 0.7,
+      "Base": "ED_TentaclePlant",
+      "MinSpawnCount": 1,
+      "Projectile": "PRJ_Spider_Spitter",
+      "Resistances": {
+        "DamageMultiplier": 1
+      },
+      "Temperature": {
+        "BurnTemperature": 60,
+        "CoolingRate": 6,
+        "DouseFireTemperature": 40,
+        "FreezeTemperature": -80,
+        "TemperatureChangeScale": 1,
+        "UnfreezeTemperature": -40,
+        "WarmingRate": 6
+      },
+      "TimeDilation": 0.7
+    }
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.85
+  },
+  "Messages": [
+    {
+      "Message": "all elite enemies has sound cue when spawn and drop red sugar after kill them, some of them will gain additional ability when lower 50% hp 全精英虫子刷出时会有音效提示，击杀后红糖，有的精英低于半血会有进一步额外能力",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            "==": 0,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "A": {
+                "Enable": {
+                  "Mutate": "DuringMission"
+                },
+                "Mutate": "Countdown",
+                "Start": 10000000
+              },
+              "B": 120,
+              "Mutate": "Modulo"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "elite enemies 精英敌人",
+      "Type": "Developer"
+    },
+    {
+      "Message": {
+        ">=": 2,
+        "Else": "enough for resup (40N), call via type /resup in chat if no cd2 install 硝石够了(40硝 没有cd2就在在聊天栏打/resup叫补给",
+        "Mutate": "IfFloat",
+        "Then": "enough for resup (50N), call via type /resup in chat if no cd2 install 硝石够了(50硝) 没有cd2就在在聊天栏打/resup叫补给",
+        "Value": {
+          "Mutate": "ResuppliesCalled"
+        }
+      },
+      "Send": {
+        ">=": {
+          ">=": 2,
+          "Else": 40,
+          "Mutate": "IfFloat",
+          "Then": 60,
+          "Value": {
+            "Mutate": "ResuppliesCalled"
+          }
+        },
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "Mutate": "DepositedResource",
+          "Resource": "Nitra"
+        }
+      },
+      "Sender": "nitra enough for resup 硝石够了",
+      "Type": "Developer"
+    },
+    {
+      "Message": "stone spawned, will keep spawning exploder on you (will self despawn after 14 seconds)飞石已出现，将持续召唤小自爆在玩家脚边(14秒后自毁)",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            ">=": 1,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "ED": "bombstone",
+              "Mutate": "EnemyCount"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "fly stone 飞石",
+      "Type": "Developer"
+    },
+    {
+      "Message": "kursite praetorian shooter r has spawn, it period spawn stomp turret around it (turret invinsible but will despawn after 4 seconds) 氪石禁卫射手,会周期性在其周围放置炮塔（炮塔无敌但4秒后销毁）",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            ">=": 1,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "ED": "stomper",
+              "Mutate": "EnemyCount"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "elite enemies 精英敌人",
+      "Type": "Developer"
+    },
+    {
+      "Message": "sentinel leader spawned, will keep spawning sentinel. if killed will also kill all sentinel spawn by it. it will spawn 2 instead 1 while lower hp than 50% 哨卫队长已出现，将持续召唤哨卫。哨卫队长死亡后所有哨卫也会一同死亡, 低于50%血量时会额外召唤一只哨卫",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            ">=": 1,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "ED": "spliter",
+              "Mutate": "EnemyCount"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "elite enemies 精英敌人",
+      "Type": "Developer"
+    },
+    {
+      "Message": "elite warden spawned. it can buff all grunt,slasher and guard making them immune stun and fear. warden also heal them when reach hp lower than 50% 典狱长老大已出现. 在场时战士三兄免疫眩晕和恐惧，低于半血时还会为它们回复血量",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            ">=": 1,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyCount"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "elite enemies 精英敌人",
+      "Type": "Developer"
+    },
+    {
+      "Message": "elite patrolbot spawned, it has 3 attack types and will change based on player distance 巡逻机器精英已出现，拥有三种攻击手段并且会根据矮人和它距离切换攻击手段",
+      "Send": {
+        "==": 1,
+        "Else": false,
+        "Mutate": "IfFloat",
+        "Then": true,
+        "Value": {
+          "A": {
+            "Mutate": "ByPlayerCount",
+            "Values": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "B": {
+            ">=": 1,
+            "Else": 0,
+            "Mutate": "IfFloat",
+            "Then": 1,
+            "Value": {
+              "ED": "elitepatrolbot",
+              "Mutate": "EnemyCount"
+            }
+          },
+          "Mutate": "Multiply"
+        }
+      },
+      "SendOnChange": true,
+      "Sender": "elite enemies 精英敌人",
+      "Type": "Developer"
+    },
+    {
+      "Message": {
+        "Choices": [
+          "skill issue 菜"
+        ],
+        "Mutate": "RandomChoice",
+        "Weights": [
+          100
+        ]
+      },
+      "Send": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "Mutate": "DwarvesDown"
+        }
+      },
+      "Sender": "Karl卡尔",
+      "Type": "Delux"
+    }
+  ],
+  "Name": "E the E A5",
+  "Pools": {
+    "CommonEnemies": {
+      "Add": [
+        "webspitter",
+        "acidspitter",
+        {
+          "Condition": {
+            "A": {
+              "Mutate": "DuringDrillevator"
+            },
+            "B": {
+              "Default": false,
+              "FinalEventA": true,
+              "FinalEventB": true,
+              "FinalEventC": true,
+              "FinalEventD": true,
+              "Mutate": "ByEscortPhase"
+            },
+            "C": {
+              "Mutate": "DuringDefend"
+            },
+            "Mutate": "Or"
+          },
+          "Else": [
+            "manace"
+          ],
+          "Mutate": "If",
+          "Then": []
+        },
+        "spreader",
+        "oppressor",
+        "shellback",
+        "bomber",
+        "icebomber",
+        "trijaw",
+        "firebomber",
+        "brundle"
+      ],
+      "Remove": [
+        "ED_Mactera_Shooter_HeavyVeteran",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Mactera_TripleShooter",
+        "ED_Bomber",
+        "ED_Spider_RapidShooter",
+        "ED_Spider_ShieldTank",
+        "ED_Woodlouse",
+        "ED_Bomber_Ice"
+      ]
+    },
+    "DisruptiveEnemies": {
+      "Add": [],
+      "Remove": [
+        "ED_Mactera_Shooter_HeavyVeteran",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Mactera_TripleShooter",
+        "ED_Bomber",
+        "ED_Spider_RapidShooter",
+        "ED_Spider_ShieldTank",
+        "ED_Woodlouse",
+        "ED_Bomber_Ice"
+      ]
+    },
+    "DisruptiveEnemyPoolCount": {
+      "Max": 8,
+      "Min": 8
+    },
+    "EnemyPool": {
+      "Add": [
+        "webspitter",
+        "acidspitter",
+        {
+          "Condition": {
+            "A": {
+              "Mutate": "DuringDrillevator"
+            },
+            "B": {
+              "Default": false,
+              "FinalEventA": true,
+              "FinalEventB": true,
+              "FinalEventC": true,
+              "FinalEventD": true,
+              "Mutate": "ByEscortPhase"
+            },
+            "C": {
+              "Mutate": "DuringDefend"
+            },
+            "Mutate": "Or"
+          },
+          "Else": [
+            "manace"
+          ],
+          "Mutate": "If",
+          "Then": []
+        },
+        "spreader",
+        "oppressor",
+        "shellback",
+        "bomber",
+        "icebomber",
+        "trijaw",
+        "firebomber",
+        "brundle"
+      ],
+      "Remove": [
+        "ED_Mactera_Shooter_HeavyVeteran",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Mactera_TripleShooter",
+        "ED_Bomber",
+        "ED_Spider_RapidShooter",
+        "ED_Spider_ShieldTank",
+        "ED_Woodlouse",
+        "ED_Bomber_Ice"
+      ]
+    },
+    "MinPoolSize": 420,
+    "SpecialEnemies": {
+      "Add": [
+        "webspitter",
+        "acidspitter",
+        {
+          "Condition": {
+            "A": {
+              "Mutate": "DuringDrillevator"
+            },
+            "B": {
+              "Default": false,
+              "FinalEventA": true,
+              "FinalEventB": true,
+              "FinalEventC": true,
+              "FinalEventD": true,
+              "Mutate": "ByEscortPhase"
+            },
+            "C": {
+              "Mutate": "DuringDefend"
+            },
+            "Mutate": "Or"
+          },
+          "Else": [
+            "manace"
+          ],
+          "Mutate": "If",
+          "Then": []
+        },
+        "spreader",
+        "oppressor",
+        "shellback",
+        "bomber",
+        "icebomber",
+        "trijaw",
+        "firebomber",
+        "brundle"
+      ],
+      "Remove": [
+        "ED_Mactera_Shooter_HeavyVeteran",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Mactera_TripleShooter",
+        "ED_Bomber",
+        "ED_Spider_RapidShooter",
+        "ED_Spider_ShieldTank",
+        "ED_Woodlouse",
+        "ED_Bomber_Ice"
+      ]
+    },
+    "StationaryEnemyCount": {
+      "Max": 15,
+      "Min": 10
+    },
+    "StationaryPool": {
+      "Add": [
+        {
+          "Default": [
+            "ED_StabberVine"
+          ],
+          "HollowBough": [],
+          "Mutate": "ByBiome"
+        },
+        "minebombbarrage",
+        "webvartok",
+        "breeder",
+        "scrabnexus",
+        "platformsniper"
+      ],
+      "Remove": [
+        "ED_SpiderSpawner",
+        "ED_BarrageInfector",
+        "ED_TentaclePlant",
+        "ED_JellyBreeder",
+        {
+          "Default": [],
+          "Escort": [
+            "webvartok"
+          ],
+          "Mutate": "ByMissionType"
+        }
+      ]
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        40,
+        40,
+        50
+      ]
+    }
+  },
+  "Salvage": {
+    "MiniMules": {
+      "ScanUsable": {
+        "UseDuration": 1
+      }
+    },
+    "Refuel": {
+      "LeavePenaltyMultiplier": 0.6
+    },
+    "Uplink": {
+      "LeavePenaltyMultiplier": 0.6
+    }
+  },
+  "SoundCues": [
+    {
+      "Cue": "/Game/Audio/SFX/SpaceRig/HoopGame/HoopGameComboMiss_Cue.HoopGameComboMiss_Cue",
+      "Play": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "ED": "stomper",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    {
+      "Cue": "/Game/Audio/SFX/SpaceRig/HoopGame/HoopGameComboMiss_Cue.HoopGameComboMiss_Cue",
+      "Play": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "ED": "elitepatrolbot",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    {
+      "Cue": "/Game/Audio/SFX/SpaceRig/HoopGame/HoopGameComboMiss_Cue.HoopGameComboMiss_Cue",
+      "Play": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "ED": "elitewarden",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    {
+      "Cue": "/Game/Audio/SFX/SpaceRig/HoopGame/HoopGameComboMiss_Cue.HoopGameComboMiss_Cue",
+      "Play": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "ED": "spliter",
+          "Mutate": "EnemyCount"
+        }
+      }
+    },
+    {
+      "Cue": {
+        "Choices": [
+          "/Game/Audio/Characters/Voices/Dwarves/Dwarf_01/Misc/Dwarf_BeingLeftBehind_Javiere_16_Cue.Dwarf_BeingLeftBehind_Javiere_16_Cue",
+          "/Game/Audio/Characters/Voices/Dwarves/Dwarf_01/Misc/Dwarf_BeingLeftBehind_Javiere_16a_Cue.Dwarf_BeingLeftBehind_Javiere_16a_Cue"
+        ],
+        "Mutate": "RandomChoice",
+        "Weights": [
+          50,
+          50
+        ]
+      },
+      "Play": {
+        "Mutate": "TriggerOnChange",
+        "RiseOnly": true,
+        "Value": {
+          "Mutate": "DwarvesDown"
+        }
+      }
+    }
+  ],
+  "SpecialEncounters": [],
+  "WaveSpawners": [
+    {
+      "Difficulty": 1,
+      "Distance": 1400,
+      "Enabled": {
+        "Condition": {
+          "Mutate": "Not",
+          "Value": {
+            "A": {
+              "Mutate": "DuringDrillevator"
+            },
+            "B": {
+              "Default": false,
+              "FinalEventA": false,
+              "FinalEventB": false,
+              "FinalEventC": false,
+              "FinalEventD": false,
+              "Finished": true,
+              "InGarage": false,
+              "Moving": false,
+              "Mutate": "ByEscortPhase",
+              "Stationary": false,
+              "WaitingForFuel": false
+            },
+            "Mutate": "Or"
+          }
+        },
+        "Else": false,
+        "Mutate": "If",
+        "Then": true
+      },
+      "Enemies": {
+        "Choices": [
+          "spliter",
+          "elitewarden",
+          "stomper",
+          "elitepatrolbot"
+        ],
+        "Mutate": "RandomChoice",
+        "Weights": [
+          {
+            ">=": 1,
+            "Else": 1,
+            "Mutate": "IfFloat",
+            "Then": 0,
+            "Value": {
+              "ED": "spliter",
+              "Mutate": "EnemyCount"
+            }
+          },
+          {
+            ">=": 1,
+            "Else": 1,
+            "Mutate": "IfFloat",
+            "Then": 0,
+            "Value": {
+              "ED": "elitewarden",
+              "Mutate": "EnemyCount"
+            }
+          },
+          {
+            ">=": 1,
+            "Else": 1,
+            "Mutate": "IfFloat",
+            "Then": 0,
+            "Value": {
+              "ED": "stomper",
+              "Mutate": "EnemyCount"
+            }
+          },
+          {
+            ">=": 1,
+            "Else": 1,
+            "Mutate": "IfFloat",
+            "Then": 0,
+            "Value": {
+              "ED": "elitepatrolbot",
+              "Mutate": "EnemyCount"
+            }
+          }
+        ]
+      },
+      "Interval": 80,
+      "Locations": 20,
+      "Name": "e"
+    },
+    {
+      "Difficulty": 1,
+      "Distance": 1500,
+      "Enabled": {
+        "Condition": {
+          "Mutate": "Not",
+          "Value": {
+            "A": {
+              "Mutate": "DuringDrillevator"
+            },
+            "Mutate": "Or"
+          }
+        },
+        "Else": false,
+        "Mutate": "If",
+        "Then": true
+      },
+      "Enemies": {
+        "Choices": [
+          "lacerator",
+          "arbalest",
+          "dreadnought"
+        ],
+        "Mutate": "RandomChoice",
+        "Weights": [
+          1,
+          1,
+          0.7
+        ]
+      },
+      "Interval": {
+        "Choices": [
+          {
+            "A": 35,
+            "B": {
+              "A": {
+                "Mutate": "DwarvesDown"
+              },
+              "B": 5,
+              "Mutate": "Multiply"
+            },
+            "Mutate": "Add"
+          },
+          55,
+          65
+        ],
+        "Mutate": "RandomChoice",
+        "Weights": [
+          1,
+          1,
+          1
+        ]
+      },
+      "Locations": 20,
+      "Name": "dreadnought"
+    }
+  ],
+  "description": "send it difficulty, idk how balance goes, anyway enjoy :D\r\n adjust 5\r\n - wave interval now 22.5s and +15 per player down\r\n  -added normalwavedifficulty 250 and set stationarydifficulty to 950\r\n  -adjust grunt spawn ratio\r\n  -change boss enemies to elite enemies (just change name, still remain spawn one each time)\r\n  -all elite enemies spawn during salvage defending phase\r\n  -all elite enemies adjust resistance (higher resistance)\r\n  -nerf kursite praetorian's stomp barrier attackdamage\r\n  -increase oppressor rarity\r\n  -adjust oppressor resistance (50% resistance for element damage)\r\n  -nerf all dreadnought resistance\r\n  -nerf firebomber, icebomber and arbalest attackdamage\r\n  -increase spreader timedilation \r\n  "
+}

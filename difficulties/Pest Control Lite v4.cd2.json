@@ -1,0 +1,467 @@
+{
+  "Caps": {
+    "MaxActiveCritters": 200,
+    "MaxActiveEnemies": [
+      90,
+      180,
+      270,
+      360
+    ],
+    "MaxActiveSwarmers": [
+      90,
+      180,
+      270,
+      360
+    ]
+  },
+  "Description": "hz5 with 5x enemies with hz7 wave interval",
+  "DifficultySetting": {
+    "AttackCooldownModifier": 1.5,
+    "BaseHazard": "Hazard 5",
+    "EncounterDifficulty": [
+      {
+        "max": 200,
+        "min": 100,
+        "weight": 1
+      },
+      {
+        "max": 400,
+        "min": 300,
+        "weight": 6
+      },
+      {
+        "max": 500,
+        "min": 400,
+        "weight": 1
+      }
+    ],
+    "EnemyCountModifier": [
+      4.25,
+      4.25,
+      6.25,
+      7.5
+    ],
+    "EnemyDamageModifier": [
+      2.8,
+      3,
+      3.2,
+      3.4
+    ],
+    "EnemyDamageResistance": [
+      1.1,
+      1.2,
+      1.3,
+      1.4
+    ],
+    "EnemyDiversity": [
+      {
+        "max": 10,
+        "min": 5,
+        "weight": 1
+      },
+      {
+        "max": 30,
+        "min": 20,
+        "weight": 8
+      },
+      {
+        "max": 20,
+        "min": 10,
+        "weight": 2
+      }
+    ],
+    "EnemyNormalWaveDifficulty": [
+      {
+        "max": 450,
+        "min": 350,
+        "weight": 1
+      }
+    ],
+    "EnemyNormalWaveInterval": [
+      {
+        "max": 150,
+        "min": 120,
+        "weight": 4
+      },
+      {
+        "max": 250,
+        "min": 180,
+        "weight": 2
+      }
+    ],
+    "EnemyWaveInterval": [
+      {
+        "max": 180,
+        "min": 160,
+        "weight": 2
+      },
+      {
+        "max": 280,
+        "min": 230,
+        "weight": 7.5
+      },
+      {
+        "max": 299,
+        "min": 299,
+        "weight": 0.5
+      }
+    ],
+    "EnvironmentalDamageModifier": 1.1,
+    "ExtraLargeEnemyDamageResistance": [
+      0.75,
+      0.8,
+      1.2,
+      1.7
+    ],
+    "ExtraLargeEnemyDamageResistanceB": [
+      0.7,
+      0.7,
+      1,
+      1.3
+    ],
+    "ExtraLargeEnemyDamageResistanceC": [
+      0.6,
+      0.7,
+      1,
+      1.6
+    ],
+    "ExtraLargeEnemyDamageResistanceD": [
+      0.75,
+      0.8,
+      1,
+      1.3
+    ],
+    "FriendlyFireModifier": 0.7,
+    "HealthRegenerationMax": 0.1,
+    "PointExtractionScalar": 1.1,
+    "ProjectileSpeedModifier": 1.7,
+    "ReviveHealthRatio": 0.1,
+    "SmallEnemyDamageResistance": [
+      1.2
+    ],
+    "SpeedModifier": 1.15,
+    "StationaryDifficulty": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 2
+      },
+      {
+        "max": 200,
+        "min": 150,
+        "weight": 2
+      },
+      {
+        "max": 350,
+        "min": 250,
+        "weight": 2
+      }
+    ],
+    "StationaryEnemyDiversity": [
+      {
+        "max": 4,
+        "min": 2,
+        "weight": 1
+      }
+    ],
+    "VeteranLarge": [
+      {
+        "max": 0.175,
+        "min": 0.175,
+        "weight": 1
+      }
+    ],
+    "VeteranNormal": [
+      {
+        "max": 0,
+        "min": 0,
+        "weight": 3
+      },
+      {
+        "max": 0.3,
+        "min": 0.15,
+        "weight": 9
+      },
+      {
+        "max": 0.6,
+        "min": 0.4,
+        "weight": 2
+      },
+      {
+        "max": 1,
+        "min": 1,
+        "weight": 0.5
+      }
+    ],
+    "WaveStartDelayScale": 0
+  },
+  "EnemiesNoSync": {
+    "ED_Bomber_Ice": {
+      "Base": "ED_Bomber_Ice",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 75,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 6,
+      "SpawnSpread": 300
+    },
+    "ED_Mactera_Shooter_Amber": {
+      "Base": "ED_Mactera_Shooter_Amber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 50,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 3,
+      "SpawnSpread": 300
+    },
+    "ED_PumpkinLootBug": {
+      "Base": "ED_PumpkinLootBug",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 40,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 100
+    },
+    "ED_Spider_Amber_Shooter": {
+      "Base": "ED_Spider_Amber_Shooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 55,
+      "MaxSpawnCount": 999,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnSpread": 300
+    },
+    "ED_Spider_Boss_TwinB_weak": {
+      "Base": "ED_Spider_Boss_TwinB",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 180,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 13,
+      "Resistances": {
+        "ColdDamageMultiplier": 5,
+        "CorrosiveDamageMultiplier": 5,
+        "ElectricDamageMultiplier": 5,
+        "ExplosionDamageMultiplier": 5,
+        "InternalDamageMultiplier": 5,
+        "KineticDamageMultiplier": 5,
+        "PhysicalDamageMultiplier": 5,
+        "RadiationDamageMultiplier": 5
+      },
+      "SpawnSpread": 1500
+    },
+    "ED_Spider_ExploderTank": {
+      "Base": "ED_Spider_ExploderTank",
+      "DifficultyRating": 175,
+      "MaxSpawnCount": 2,
+      "MinSpawnCount": 1,
+      "Movement": {
+        "AlignDirectionSpeed": 1.35,
+        "AlignToTargetMinRequiredAngle": 1.1,
+        "MaxAcceleration": 1.35,
+        "MaxBrakingDeceleration": 1.35,
+        "MaxPawnSpeed": 1.35,
+        "MaxStrafeDistance": 1.35,
+        "StrafeSpeed": 1.35
+      },
+      "Rarity": 9,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 16000,
+      "TimeDilation": 1
+    },
+    "ED_Spider_Grunt_Ice": {
+      "Base": "ED_Spider_Grunt_Ice",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 999,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "SpawnSpread": 300
+    },
+    "ED_Spider_Grunt_Mutated": {
+      "Base": "ED_Spider_Grunt_Mutated",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 10,
+      "MaxSpawnCount": 999,
+      "MinSpawnCount": 1,
+      "Rarity": 1,
+      "SpawnSpread": 300
+    },
+    "ED_Spider_Shooter": {
+      "Base": "ED_Spider_Shooter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 55,
+      "MaxSpawnCount": 999,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 300,
+      "TimeDilation": 1
+    },
+    "ED_Spider_Shooter_Ground": {
+      "Base": "ED_Spider_Shooter_Ground",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 5,
+      "SpawnSpread": 1500
+    },
+    "ED_Spider_Spitter": {
+      "Base": "ED_Spider_Spitter",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 55,
+      "MaxSpawnCount": 999,
+      "MinSpawnCount": 1,
+      "Rarity": 4,
+      "SpawnAmountModifier": 1,
+      "SpawnSpread": 300,
+      "TimeDilation": 1
+    },
+    "ED_Spider_Tank_Amber": {
+      "Base": "ED_Spider_Tank_Amber",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 6,
+      "SpawnSpread": 300
+    },
+    "ED_Spider_Tank_HeavySpawn": {
+      "Base": "ED_Spider_Tank_HeavySpawn",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 6,
+      "SpawnSpread": 1500
+    },
+    "ED_Spider_Tank_Ice": {
+      "Base": "ED_Spider_Tank_Ice",
+      "CanBeUsedForConstantPressure": false,
+      "CanBeUsedInEncounters": false,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 6,
+      "SpawnSpread": 300
+    },
+    "ED_Spider_Tank_Mutated": {
+      "Base": "ED_Spider_Tank_Mutated",
+      "CanBeUsedForConstantPressure": true,
+      "CanBeUsedInEncounters": true,
+      "DifficultyRating": 100,
+      "MaxSpawnCount": 1,
+      "MinSpawnCount": 1,
+      "Rarity": 6,
+      "SpawnSpread": 300
+    }
+  },
+  "EscortMule": {
+    "BigHitDamageModifier": 0.85,
+    "BigHitDamageReductionThreshold": 0,
+    "FriendlyFireModifier": 0.1,
+    "NeutralDamageModifier": 0.1
+  },
+  "Name": "Pest Control Lite v4",
+  "Pools": {
+    "CommonEnemies": {
+      "Add": [
+        "ED_Spider_ExploderTank",
+        "ED_PumpkinLootBug",
+        "ED_Spider_Tank_Amber",
+        "ED_Spider_Tank_HeavySpawn",
+        "ED_Spider_Tank_Ice",
+        "ED_Spider_Tank_Mutated",
+        "ED_Spider_Grunt_Ice",
+        "ED_Spider_Grunt_Mutated",
+        "ED_Spider_Boss_TwinB_weak"
+      ],
+      "Remove": []
+    },
+    "DisruptiveEnemies": {
+      "Add": [
+        "ED_Spider_ExploderTank"
+      ],
+      "Remove": []
+    },
+    "DisruptiveEnemyPoolCount": {
+      "Max": 4,
+      "Min": 2
+    },
+    "EnemyPool": {
+      "Add": [
+        "ED_Spider_ExploderTank",
+        "ED_Mactera_Shooter_Amber",
+        "ED_PumpkinLootBug",
+        "ED_Spider_Tank_Amber",
+        "ED_Spider_Tank_HeavySpawn",
+        "ED_Spider_Tank_Ice",
+        "ED_Spider_Tank_Mutated",
+        "ED_Spider_Amber_Shooter",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Spider_Shooter_Ground",
+        "ED_Spider_Grunt_Ice",
+        "ED_Spider_Grunt_Mutated",
+        "ED_Bomber_Ice",
+        "ED_Spider_Boss_TwinB_weak"
+      ],
+      "Remove": []
+    },
+    "MinPoolSize": 50,
+    "SpecialEnemies": {
+      "Add": [
+        "ED_Bomber_Ice",
+        "ED_Mactera_Shooter_Amber",
+        "ED_Spider_Amber_Shooter",
+        "ED_Spider_Spitter",
+        "ED_Spider_Shooter",
+        "ED_Spider_Shooter_Ground",
+        "ED_Spider_Boss_TwinB_weak"
+      ],
+      "Remove": []
+    },
+    "StationaryEnemyCount": {
+      "Max": 6,
+      "Min": 6
+    },
+    "StationaryPool": {
+      "Add": [],
+      "Remove": []
+    }
+  },
+  "Resupply": {
+    "Cost": {
+      "Mutate": "ByResuppliesCalled",
+      "Values": [
+        0,
+        0,
+        40,
+        {
+          "Mutate": "ByPlayerCount",
+          "Values": [
+            60,
+            60,
+            40,
+            40
+          ]
+        }
+      ]
+    }
+  }
+}
