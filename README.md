@@ -1,6 +1,6 @@
 # DRG — Custom Difficulty 2 library
 
-Auto-exported from `CD2.sav` (49 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
+Auto-exported from `CD2.sav` (50 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
 
 > This repo is updated automatically by a watcher on the gaming PC: every time a difficulty is added/edited/removed in-game, a new commit is made. Do not edit by hand.
 
@@ -30,6 +30,7 @@ Auto-exported from `CD2.sav` (49 difficulties). Each `.cd2.json` in `difficultie
 | FC_b23 - First 0 | REQUIRES MORE ENEMY VARIANTS (MEV) AND DEA. FC, the harder version of ND created | {'Cost': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'ResuppliesCalled'}, '==': 0, 'Then': 0, 'Else': 50}} |  |
 | Hayang’s EverLasting Legacy |  | {'Cost': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'ResuppliesCalled'}, '<=': 2, 'Then': 0, 'Else': 35}} |  |
 | Hazard 7 - 50N |  | {'Cost': 50} |  |
+| Hazard 7.5-HawkesWorkSpring-Class-V20野房降难度版 | 作者：立志成为gal糕手 Vars由SeasonC编写 作者：立志成为gal糕手 Vars由SeasonC编写 野房适用，主机拥有CD2即可游玩，无CD2的客机 | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [0, {'Mutate': 'Multiply', 'A': 60, 'B': {'Mutate': 'ByMissionType', 'Default': 0.5, 'Salvage': 0}}, {'Mutate': 'Multiply', 'A': 60, 'B': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'EnemyCount', 'ED': 'Resupply_Free'}, '>=': 1, 'Then': 0, 'Else': 1}, 'C': {'Mutate': 'ByMissionType', 'Default': 1, 'Salvage': 0.5}}, {'Mutate': 'Multiply', 'A': 60, 'B': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'EnemyCount', 'ED': 'Resupply_Free'}, '>=': 1, 'Then': 0, 'Else': 1}}]}} |  |
 | Hazard 7x1.5 - 50N |  | {'Cost': 50} |  |
 | Hazard 9-HawkesWorkSpring-Class | 仅主机拥有CD2即可游玩，代码作者：立志成为gal糕手 代码内容概述: 搜救行动第一波自然潮5分30到5分40，第二波及以后3分40到3分50 其他任务均为3分 | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [0, 30, {'Mutate': 'Multiply', 'A': 60, 'B': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'EnemyCount', 'ED': 'Resupply_Free'}, '>=': 1, 'Then': 0, 'Else': 1}}]}} |  |
 | Hazard Myriad v1.0 |  | {'Cost': {'Mutate': 'IfFloat', 'Value': {'Mutate': 'ResuppliesCalled'}, '<': 1, 'Then': 40, 'Else': 50}} |  |
