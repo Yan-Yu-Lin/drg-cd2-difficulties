@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DRG 自定义难度 2 难度库 · Custom Difficulty 2 Library</title>
+<style>
+  :root{--bg:#14110c;--card:#1f1a12;--card2:#272015;--line:#3a2f1d;--amber:#f5a623;--amber2:#ffce6b;--text:#ece3d2;--mut:#a99b7f;--ok:#5fd38a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+  a{color:var(--amber2)}
+  header{padding:30px 20px 8px;max-width:1100px;margin:0 auto}
+  h1{margin:0 0 6px;font-size:25px;color:var(--amber)}
+  .sub{color:var(--mut);font-size:14px}
+  .how{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:16px 0;font-size:13.5px;color:var(--mut)}
+  .how b{color:var(--text)}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+  #q{flex:1;min-width:200px;background:var(--card2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:10px 12px;font-size:15px}
+  .count{color:var(--mut);font-size:13px;white-space:nowrap}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 4px}
+  .chip{background:var(--card2);border:1px solid var(--line);color:var(--mut);border-radius:999px;padding:5px 13px;font-size:13px;cursor:pointer;user-select:none;transition:.12s}
+  .chip:hover{border-color:var(--amber)}
+  .chip.on{background:var(--amber);border-color:var(--amber);color:#1a1206;font-weight:600}
+  .chip .c{opacity:.7;font-size:11.5px;margin-left:4px}
+  main{max-width:1100px;margin:0 auto;padding:6px 20px 60px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;display:flex;flex-direction:column}
+  .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+  .name{font-weight:700;font-size:16px;color:var(--amber2);margin:0 0 4px;word-break:break-word}
+  .stag{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:5px;padding:1px 7px;white-space:nowrap;flex-shrink:0}
+  select.ver{background:var(--card2);border:1px solid var(--line);color:var(--amber2);border-radius:7px;padding:4px 8px;font-size:12.5px;margin:2px 0 8px;max-width:100%}
+  .desc{color:var(--mut);font-size:13px;white-space:pre-wrap;max-height:4.7em;overflow:hidden;margin-bottom:8px}
+  .desc.open{max-height:none}
+  .more{color:var(--amber);cursor:pointer;font-size:12px;margin-bottom:10px;user-select:none}
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;min-height:4px}
+  .badge{background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:11.5px;color:var(--mut)}
+  .badge b{color:var(--text);font-weight:600}
+  .btns{display:flex;gap:8px;margin-top:auto}
+  button.act,a.act{flex:1;text-align:center;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:8px;padding:9px;font-size:13.5px;cursor:pointer;text-decoration:none;transition:.12s}
+  button.act:hover,a.act:hover{border-color:var(--amber);color:var(--amber2)}
+  button.copy.done{border-color:var(--ok);color:var(--ok)}
+  footer{max-width:1100px;margin:0 auto;padding:24px 20px;color:var(--mut);font-size:12.5px;border-top:1px solid var(--line)}
+  .empty{color:var(--mut);padding:40px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>⛏️ DRG 自定义难度 2 · 难度库</h1>
+  <div class="sub">Deep Rock Galactic — Custom Difficulty 2 (CD2) · <span id="n">…</span> 个难度 / difficulties</div>
+  <div class="how">
+    <b>怎么用 / How to use：</b> 点 <b>📋 复制代码</b>，进游戏打开 Custom Difficulty 2 → Import（导入）粘贴即可。有多个版本时用下拉框选择。<br>
+    <span style="opacity:.8">Click <b>📋 Copy</b>, then in-game CD2 → Import and paste. Use the dropdown to pick a version.</span>
+  </div>
+  <div class="bar">
+    <input id="q" placeholder="搜索难度名 / 描述…  search by name or description">
+    <span class="count" id="c"></span>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+<main><div class="grid" id="grid"></div><div class="empty" id="empty" style="display:none">没有匹配的难度 / no matches</div></main>
+<footer>
+  自动同步自 GitHub · auto-synced from
+  <a href="https://github.com/Yan-Yu-Lin/drg-cd2-difficulties" target="_blank" rel="noopener">github.com/Yan-Yu-Lin/drg-cd2-difficulties</a>
+  · 最后更新 / updated <span id="upd">—</span>
+</footer>
+<script>
+const grid=document.getElementById('grid'),q=document.getElementById('q'),c=document.getElementById('c'),
+      empty=document.getElementById('empty'),chipsEl=document.getElementById('chips');
+let DATA={groups:[],series:[]}, activeSeries='all';
+const esc=s=>(s||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+const fmt=v=>Array.isArray(v)?v.join(' / '):v;
+
+function fillCard(el,v){
+  el.querySelector('.desc').textContent=v.description||'（无描述 / no description）';
+  const b=[];
+  if(v.resupply!=null&&v.resupply!=='')b.push(`<span class="badge">补给 Resupply <b>${esc(''+v.resupply)}</b></span>`);
+  if(v.enemyCount)b.push(`<span class="badge">敌人数量 ×<b>${esc(fmt(v.enemyCount))}</b></span>`);
+  if(v.enemyDamage)b.push(`<span class="badge">敌人伤害 ×<b>${esc(fmt(v.enemyDamage))}</b></span>`);
+  el.querySelector('.badges').innerHTML=b.join('');
+  el.querySelector('.copy').dataset.f=encodeURIComponent(v.file);
+  el.querySelector('.dl').href='files/'+encodeURIComponent(v.file);
+}
+function card(g){
+  const el=document.createElement('div');el.className='card';
+  const multi=g.versions.length>1;
+  const opts=g.versions.map((v,i)=>`<option value="${i}">${esc(v.version)}</option>`).join('');
+  el.innerHTML=`<div class="top"><div class="name">${esc(g.base)}</div>${g.series!=='Other'?`<span class="stag">${esc(g.series)}</span>`:''}</div>
+    ${multi?`<select class="ver">${opts}</select>`:''}
+    <div class="desc"></div><div class="more" style="display:none">展开 / more ▾</div>
+    <div class="badges"></div>
+    <div class="btns">
+      <button class="act copy">📋 复制代码 Copy</button>
+      <a class="act dl" download>⬇ 下载 Download</a>
+    </div>`;
+  fillCard(el,g.versions[0]);
+  // expandable description
+  const desc=el.querySelector('.desc'),more=el.querySelector('.more');
+  const checkMore=()=>{more.style.display=desc.scrollHeight>desc.clientHeight+4||desc.classList.contains('open')?'block':'none';};
+  more.onclick=()=>{desc.classList.toggle('open');more.textContent=desc.classList.contains('open')?'收起 / less ▴':'展开 / more ▾';};
+  if(multi)el.querySelector('.ver').onchange=e=>{fillCard(el,g.versions[+e.target.value]);setTimeout(checkMore);};
+  setTimeout(checkMore);
+  el.querySelector('.copy').onclick=async e=>{
+    const btn=e.target;
+    try{const t=await(await fetch('files/'+btn.dataset.f)).text();
+      await navigator.clipboard.writeText(t);
+      btn.textContent='✓ 已复制 Copied';btn.classList.add('done');
+      setTimeout(()=>{btn.textContent='📋 复制代码 Copy';btn.classList.remove('done')},1600);
+    }catch(err){btn.textContent='复制失败,请下载';}
+  };
+  return el;
+}
+function matches(g,term){
+  if(!term)return true;
+  if(g.base.toLowerCase().includes(term))return true;
+  return g.versions.some(v=>(v.name+' '+(v.description||'')).toLowerCase().includes(term));
+}
+function render(){
+  const term=q.value.trim().toLowerCase();
+  const list=DATA.groups.filter(g=>(activeSeries==='all'||g.series===activeSeries)&&matches(g,term));
+  grid.innerHTML='';list.forEach(g=>grid.appendChild(card(g)));
+  empty.style.display=list.length?'none':'block';
+  const diffs=list.reduce((s,g)=>s+g.versions.length,0);
+  c.textContent=`${list.length} 张卡 / cards · ${diffs} 难度`;
+}
+function renderChips(){
+  const mk=(name,label,count)=>{
+    const d=document.createElement('div');d.className='chip'+(activeSeries===name?' on':'');
+    d.innerHTML=esc(label)+(count!=null?`<span class="c">${count}</span>`:'');
+    d.onclick=()=>{activeSeries=name;renderChips();render();};return d;
+  };
+  chipsEl.innerHTML='';
+  chipsEl.appendChild(mk('all','全部 All',DATA.count));
+  DATA.series.forEach(s=>chipsEl.appendChild(mk(s.name,s.name==='Other'?'其他 Other':s.name,s.count)));
+}
+q.addEventListener('input',render);
+fetch('data.json?_='+Date.now()).then(r=>r.json()).then(j=>{
+  DATA=j;
+  DATA.groups.sort((a,b)=>a.base.localeCompare(b.base));
+  document.getElementById('n').textContent=j.count;
+  document.getElementById('upd').textContent=j.updated||'—';
+  renderChips();render();
+}).catch(()=>{grid.innerHTML='<div class="empty">加载失败 / failed to load</div>';});
+</script>
+</body>
+</html>
