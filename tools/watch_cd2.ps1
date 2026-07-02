@@ -66,7 +66,11 @@ function Process-Change {
       $msg = "auto: $ts ($n difficulties, cd2 $($sha.Substring(0,8)))"
       & $Git commit -m $msg 2>&1 | Out-Null
       Log "committed: $msg"
+      # remote may have commits made elsewhere (e.g. site edits) — rebase or push is rejected
+      & $Git pull --rebase 2>&1 | ForEach-Object { Log "pull: $_" }
+      if ($LASTEXITCODE -ne 0) { & $Git rebase --abort 2>&1 | Out-Null; Log 'PULL FAILED - push skipped, will retry on next change' }
       & $Git push 2>&1 | ForEach-Object { Log "push: $_" }
+      if ($LASTEXITCODE -ne 0) { Log 'PUSH FAILED' }
     } else {
       Log 'no file changes after decode (nothing to commit)'
     }
