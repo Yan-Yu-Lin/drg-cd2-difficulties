@@ -1,6 +1,6 @@
 # DRG — Custom Difficulty 2 library
 
-Auto-exported from `CD2.sav` (52 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
+Auto-exported from `CD2.sav` (53 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
 
 > This repo is updated automatically by a watcher on the gaming PC: every time a difficulty is added/edited/removed in-game, a new commit is made. Do not edit by hand.
 
@@ -9,6 +9,7 @@ Auto-exported from `CD2.sav` (52 difficulties). Each `.cd2.json` in `difficultie
 | 5*3 | 理论5*3，实际？cd2格式代码难度，修改时间2026/1/10 | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [0, {'Mutate': 'ByMissionType', 'Default': 60, 'Salvage': {'Mutate': 'Add', 'A': 0, 'B': {'Mutate': 'Multiply', 'A': {'Mutate': 'Clamp', 'Value': {'Mutate': 'ResuppliesCalled'}, 'Min': 0, 'Max': 2}, 'B': 30}}, 'DeepScan': {'Mutate': 'Add', 'A': 0, 'B': {'Mutate': 'Multiply', 'A': {'Mutate': 'Clamp', 'Value': {'Mutate': 'ResuppliesCalled'}, 'Min': 0, 'Max': 3}, 'B': 20}}, 'Refinery': {'Mutate': 'Add', 'A': 0, 'B': {'Mutate': 'Multiply', 'A': {'Mutate': 'Clamp', 'Value': {'Mutate': 'ResuppliesCalled'}, 'Min': 0, 'Max': 3}, 'B': 20}}, 'Escort': {'Mutate': 'ByEscortPhase', 'Default': 60, 'FinalEventA': 55, 'FinalEventB': 50, 'FinalEventC': 45, 'FinalEventD': 40}}]}} |  |
 | 6x2EX | REQUIRES MORE ENEMY VARIANTS (MEV). CD2 port of 6x2EX (6x2 Extra), a 6x2-based,  | {'Cost': 45} |  |
 | Celestial v1.07 | REQUIRES CD2 beta 15 (UPDATED), MEV v5.4 AND DEA a05t2+. Recommended VEA. Celest | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50]}} |  |
+| Death Bringer V2 [B02]C | **NOTE**: Both host & clients require CD2 Update 17, MEV v5.4, DEA b02.1 & EEE v | {'Cost': {'Mutate': 'If', 'Condition': {'Var': 'Jammer'}, 'Then': {'Var': 'Resup_Disabled'}, 'Else': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 60]}}} |  |
 | Death Penalty V2 [B09] | **NOTE**: Both host & clients require CD2 Update 17, MEV v5.4 & DEA b02.1 **NOTE | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50]}} |  |
 | Death Penalty V2 [B11] | **NOTE**: Both host & clients require CD2 Update 17, MEV v5.4 & DEA b02.1 **NOTE | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50]}} |  |
 | Death Row V2 [A21] | **NOTE**: Both host & clients require CD2 Update 17, MEV v5.4 & DEA b02.1 **NOTE | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 60]}} |  |
