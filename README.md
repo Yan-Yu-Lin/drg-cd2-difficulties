@@ -1,6 +1,6 @@
 # DRG — Custom Difficulty 2 library
 
-Auto-exported from `CD2.sav` (53 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
+Auto-exported from `CD2.sav` (54 difficulties). Each `.cd2.json` in `difficulties/` is one difficulty you can paste/import into the Custom Difficulty 2 mod in Deep Rock Galactic.
 
 > This repo is updated automatically by a watcher on the gaming PC: every time a difficulty is added/edited/removed in-game, a new commit is made. Do not edit by hand.
 
@@ -19,6 +19,7 @@ Auto-exported from `CD2.sav` (53 difficulties). Each `.cd2.json` in `difficultie
 | DL Maelstrom (early testing) | A more intense version of DL Blitz. Waves are now even faster, as well as additi | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 60]}} |  |
 | DL Maelstrom (early testing) v0.2 | A more intense version of DL Blitz. Waves are now even faster, as well as additi | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 60]}} |  |
 | DL Maelstrom_v1.2 | A more intense version of DL Blitz. Waves are now even faster, as well as additi | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 60]}} |  |
+| DL Plex_v1.8 | **NOTE**: Only the host is required to have MEV to add korlok sprouts into the s | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50]}} |  |
 | DL Plus_v2.3 | A reasonable step-up to DL. Higher average enemy diversity. More grunt clusters. | {'Cost': 40} |  |
 | DP_b28 | **NOTE**: Host requires CD2 Update 17 or above **NOTE**: Only the host is requir | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50]}} |  |
 | DS_a01  | **NOTE**: Host requires CD2 Update 17 or above **NOTE**: Only the host is requir | {'Cost': {'Mutate': 'ByResuppliesCalled', 'Values': [40, 50, 60]}} |  |
